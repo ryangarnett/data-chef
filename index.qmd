@@ -1,0 +1,18 @@
+---
+title: "Data Chef"
+page-layout: full
+---
+
+<center>![](index-banner-filter.jpg)</center>
+
+<br>
+
+<hr>
+
+<br>
+
+<p style="color:#1a1a1aff;text-align:center;font-size:1.5em">
+
+Serving data knowledge for everyone through content and strategy
+
+</p>

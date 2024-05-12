@@ -1,0 +1,510 @@
+---
+title: "Choosing an Electric Vehicle"
+author: "Ryan Garnett"
+date: "2023-04-14"
+categories: [EV, modelling]
+---
+
+# Purpose
+
+Electric vehicles (EV) are increasing in popularity, by both the consumer and automakers. There are a significant number of EV available on the market, each having different features and characteristics. With EVs being relatively new to the vehicle market, it can be very difficult to know which EVs to consider as a new vehicle. Within this story we will present a *data driven* approach for making an informed decision when looking for new electric vehicles. A number of EVs will be evaluated based on objective features, omitting things like appearance, style, etc. A custom analytical model will be created to analyze the features and suggest the top electric vehicles.
+
+# Story Setup {.tabset}
+
+In order to tell a data story there are certain things that are required (i.e. packages, importing data, custom functions, etc.). This section outlines the required pieces to tell our data story.
+
+::: panel-tabset
+## Load Packages
+
+```{r message = FALSE, warning = FALSE}
+# Data access package
+library(readr)
+
+# Data wrangling package
+library(dplyr)
+
+# Data presentation packages
+library(ggplot2)
+library(DT)
+```
+
+```{r message = FALSE, warning = FALSE, echo = FALSE}
+setwd("~/data-chef/repos/data-stories/data-stories-blogsite/stories")
+```
+
+## Import Dataset
+
+Data about electric vehicles (manufacture, model, type, price, range, and drive train) were collected during the third week of March 2023, using Nova Scotia Canada as a location for calculating pricing. The type of electric vehicle was broken into two group full electric (EV) and plug-in hybrid electric (PHEV); non plug-in hybrid vehicles were omitted from the data collection.
+
+```{r}
+# Data collected on electric vehicles
+# Luxury electric vehicles were omitted from data collection
+vehicles <- readr::read_csv("https://codeberg.org/data-chef/data-stories/raw/branch/main/data-stories-blogsite/stories/data/ev-vehicles.csv", col_types = cols())
+```
+
+## Custom ggplot2 Theme
+
+```{r}
+# Custom theme
+data_chef_theme <- ggplot2::theme(
+  
+    # Text -- title, subtitle, labels, and caption
+    plot.title = ggplot2::element_text(colour = "#404040", size = 14, family = "Roboto", face = "bold"),
+    plot.subtitle = ggplot2::element_text(colour = "#404040", size = 12, family = "Roboto"),
+    axis.title.x = ggplot2::element_text(colour = "#404040", size = 10, family = "Roboto"),
+    axis.title.y = ggplot2::element_text(colour = "#404040", size = 10, family = "Roboto"),
+    legend.title = ggplot2::element_text(colour = "#404040", size = 8, family = "Roboto"),
+    legend.text = ggplot2::element_text(colour = "#404040", size = 8, family = "Roboto"),
+    axis.text.x = ggplot2::element_text(colour = "#404040", size = 8, family = "Roboto"),
+    axis.text.y = ggplot2::element_text(colour = "#404040", size = 8, family = "Roboto"),
+    plot.caption = ggplot2::element_text(colour = "#404040", size = 6, family = "Roboto"),
+    
+    # Chart elements -- grids
+    panel.grid.major.x = ggplot2::element_blank(),
+    panel.grid.major.y = ggplot2::element_line(colour = "#BFBFBF", linetype = "dotted", linewidth = 0.3),
+    panel.grid.minor.x = ggplot2::element_blank(),
+    panel.grid.minor.y = ggplot2::element_blank(),
+    panel.background = element_blank()
+  ) 
+```
+:::
+
+<br> <br>
+
+# Data Exploration
+
+An essential aspect of all data analysis is exploring the data. Through the exploration you become familiar with the elements that are available within the dataset(s), as well as the potential analysis that can be performed with the dataset(s).
+
+There were **`r as.numeric(dplyr::count(vehicles))`** vehicles from **`r as.numeric(vehicles |> dplyr::distinct(make) |> dplyr::count())`** car manufactures being evaluated.
+
+<br>
+
+::: panel-tabset
+## Tabular View
+
+```{r message = FALSE, warning = FALSE, echo = FALSE}
+# Randomly selected 10 datasets
+vehicles |>
+  dplyr::select(make:price) |>
+  dplyr::arrange(make, model) |>
+  DT::datatable()
+```
+
+## Electric Vehicle Types
+
+Distribution of EV and PHEV vehicles
+
+```{r message = FALSE, warning = FALSE, echo = FALSE}
+# Visualizing the distribution of EV types
+ggplot2::ggplot(vehicles) +
+  aes(x = type) +
+  geom_bar(fill = "#153331") +
+  labs(x = "Electric Vehicle Type", y = "Number of Vehicles", 
+  caption = "Created by: Data Chef") +
+  theme_minimal() +
+  data_chef_theme
+```
+
+## Electric Vehicle Characteristics by Price
+
+Distribution of vehicles by type, price, and drive train
+
+```{r message = FALSE, warning = FALSE, echo = FALSE}
+# Visualizing the distribution of EV characteristics based on price
+vehicles |>
+ggplot2::ggplot() +
+  aes(x = price, y = type, fill = drivetrain) +
+  geom_violin(adjust = 1L, scale = "area", color = "#ffffff") +
+  scale_fill_manual(values = c(`4WD` = "#A62014", AWD = "#E74F2C", FWD = "#153331", RWD = "#9FC2B9")) +
+  labs(x = "Purchase Price (CAD)", y = "Electric Vehicle Type", caption = "Created by: Data Chef") +
+  theme_minimal() +
+  data_chef_theme +
+    theme(legend.title = element_blank(),
+          legend.position = "bottom")
+```
+:::
+
+<br> <br>
+
+# Modelling
+
+When developing a model specific parameters are needed in order to make an objective evaluation. The main constraint for this model was the ability to drive exclusively using electric power, without limitations (i.e. city, highway, etc.). Because of this requirement only pure electric vehicles and plug-in hybrid vehicles were considered.
+
+There key factors to the model are
+
+-   Affordability
+-   Driving range
+-   Drive train
+
+<br>
+
+**Affordability** <br> The purchase cost of the vehicle is a very important factor for many. The *price* is considered the advertised price pre taxes, in Canadian dollars, based on a purchase in Nova Scotia. Federal and provincial EV incentives were excluded.
+
+<br>
+
+**Driving range** <br> The EVs primary usage would be for daily commuting, with a round trip distance of \~60 kms, with the need for extended distance to account for slight variations that are likely to occur daily (i.e. running errands, construction detours, etc.). While daily commuting is the main purpose for the EV, it would be great to be able to use the vehicle for other reasons, specifically lifestyle related activities, such as camping, surfing, skiing, or staycation road trips. The addition of lifestyle means a greater driving range would be desirable.
+
+<br>
+
+**Drive train** <br> Seasonal variations can have significant impacts on driving conditions in Nova Scotia. The weather during the spring, fall, and winter can produce challenging driving conditions. One method to combat difficult road conditions is to have a drive train system that provides more traction.
+
+<br> <br>
+
+## Feature Engineering
+
+The format of the data collected on the EVs is not conducive to support the design of the model. Rather than modifying the source data (i.e. changing the values to reflected the desired data format values) new features, or attributes, will be created using the source values.
+
+> Feature engineering entails reformatting predictor values to make them easier for a model to use effectively. This includes transformations and encoding of the data to be represent their important characteristics <br> *Tidy Modeling with R* <br> *Max Kuhn & Julie Silge*
+
+Source data elements were used to created three features for use in the model. New features were encoding using values of 0, 1, 3, 6, and 9 providing a clear distinction between the values of the feature.
+
+::: panel-tabset
+### Price
+
+The following was used when creating new price features
+
+|    **Price Range**    | **Feature Encoding** |
+|:---------------------:|:--------------------:|
+|  Less than \$30,000   |          9           |
+| \$30,000 to \$40,000  |          6           |
+| \$40,000 to \$50,000  |          3           |
+| \$50,000 to \$60,000  |          1           |
+| Greater than \$60,000 |          0           |
+
+```{r message = FALSE, warning = FALSE}
+# Function to create new feature
+# Specific to electric vehicle price
+create_price_feature <- function(.data, price_column){
+  .data |>
+    dplyr::mutate(price_value = dplyr::case_when(
+    {{price_column}} < 30000 ~ 9,
+    dplyr::between({{price_column}}, 30000, 40000) ~ 6,
+    dplyr::between({{price_column}}, 40000, 50000) ~ 3,
+    dplyr::between({{price_column}}, 50000, 60000) ~ 1,
+    {{price_column}} > 60000 ~ 0
+  ))
+}
+```
+
+### Range
+
+The following was used when creating new driving range (in kilometres) features
+
+| **Driving Range**  | **Feature Encoding** |
+|:------------------:|:--------------------:|
+| Greater than 500km |          9           |
+|    400 to 500km    |          6           |
+|    300 to 400km    |          3           |
+|    200 to 300km    |          1           |
+|  Less than 200km   |          0           |
+
+```{r message = FALSE, warning = FALSE}
+# Function to create new feature
+# Specific to electric vehicle range
+create_range_feature <- function(.data, range_column){
+  .data |>
+    dplyr::mutate(range_value = dplyr::case_when(
+    {{range_column}} > 500 ~ 9,
+    dplyr::between({{range_column}}, 400, 500) ~ 6,
+    dplyr::between({{range_column}}, 300, 400) ~ 3,
+    dplyr::between({{range_column}}, 200, 300) ~ 1,
+    {{range_column}} < 200 ~ 0
+  ))
+}
+```
+
+### Drive Train
+
+The following was used when creating new drive train features
+
+|     **Drive Train**     | **Feature Encoding** |
+|:-----------------------:|:--------------------:|
+| Four wheel drive (4WD)  |          9           |
+|  All wheel drive (AWD)  |          6           |
+| Front wheel drive (FWD) |          3           |
+| Rear wheel drive (RWD)  |          1           |
+
+```{r  message = FALSE, warning = FALSE}
+# Function to create new feature
+# Specific to electric vehicle drivetrain
+create_drivetrain_feature <- function(.data, drivetrain_column){
+  .data |>
+    dplyr::mutate(drivetrain_value = dplyr::case_when(
+    {{drivetrain_column}} == "4WD" ~ 9,
+    {{drivetrain_column}} == "AWD" ~ 6,
+    {{drivetrain_column}} == "FWD" ~ 3,
+    {{drivetrain_column}} == "RWD" ~ 1
+  ))
+}
+```
+
+### Engineered Dataset
+
+```{r message = FALSE, warning = FALSE, echo = FALSE}
+# Data frame with the new engineered features
+vehicles <- vehicles |>
+  create_drivetrain_feature(drivetrain) |>
+  create_range_feature(range) |>
+  create_price_feature(price)
+```
+
+```{r message = FALSE, warning = FALSE}
+vehicles |>
+  create_drivetrain_feature(drivetrain) |>
+  create_range_feature(range) |>
+  create_price_feature(price) |>
+  DT::datatable()
+```
+:::
+
+<br> <br>
+
+## Designing a Model
+
+The idea behind the model is to combine the three variables into a single value that can be used to objectively suggest which EVs meet the needs of the user. Using this idea, there are two methods to *combine* the variables, adding or multiplying. For this story two models will be designed, one using an additive approach, and the other using a multiply approach.
+
+A critical aspect of the model is to have a weighting factor for each of the variables. The thought behind this was that some variables are more important than others.
+
+```{r message = FALSE, warning = FALSE}
+weights <- list(price = 0.6, range = 0.3, drivetrain = 0.1)
+```
+
+**Model Variable Weights**
+
+|   Variable   |         Weight         |
+|:------------:|:----------------------:|
+|   *Price*    |   `r weights$price`    |
+|   *Range*    |   `r weights$range`    |
+| *Drivetrain* | `r weights$drivetrain` |
+
+<br>
+
+### Model One
+
+The approach of this model is to apply the variable weight to each variable and **add** each variable together
+
+<br>
+
+$$
+(price * weightPrice) + (range * weightRange) + (drivetrain * weightDrivetrain)
+$$
+
+<br>
+
+::: panel-tabset
+#### Building Model One
+
+```{r message = FALSE, warning = FALSE}
+model1 <- function(.data, manufacture, model, price, range, drivetrain){
+  .data |>
+    dplyr::mutate(model_output = ({{price}} * weights$price) + ({{range}} * weights$range) + ({{drivetrain}} * weights$drivetrain)) |>
+    dplyr::select({{manufacture}}, {{model}}, model_output)
+}
+```
+
+#### Model One Output
+
+```{r eval = FALSE, message = FALSE, warning = FALSE}
+# Applying model one to the vehicle dataset
+vehicles |>
+  model1(manufacture = make,
+         model = model,
+         price = price_value,
+         range = range_value,
+         drivetrain = drivetrain_value)
+```
+
+```{r message = FALSE, warning = FALSE, echo = FALSE}
+# Applying and outputting model one to the vehicle dataset
+df_model1 <- vehicles |>
+  model1(manufacture = make,
+         model = model,
+         price = price_value,
+         range = range_value,
+         drivetrain = drivetrain_value) 
+
+df_model1 |>
+  dplyr::arrange(desc(model_output), make, model) |>
+  DT::datatable()
+```
+
+#### Visualizing Model One
+
+```{r message = FALSE, warning = FALSE, echo = FALSE}
+df_model1 |>
+  ggplot2::ggplot() +
+  aes(x = model_output, y = model) +
+  geom_boxplot(fill = "#153331") +
+  labs(x = "Model One Output", 
+  y = "Vehicle Make", caption = "Created by: Data Chef") +
+  theme_minimal() +
+  data_chef_theme +
+  theme(legend.title = element_blank(),
+        legend.position = "bottom")
+```
+:::
+
+<br>
+
+The top five electric vehicles identified from *Model One* are **`r df_model1 |> dplyr::top_n(5, model_output) |> dplyr::mutate(ev_name = paste0(make, " ", model)) |> dplyr::arrange(desc(model_output), make, model) |> dplyr::pull(ev_name)`**
+
+<br> <br>
+
+### Model Two
+
+The approach of this model is to apply the variable weight to each variable and **multiply** each variable together
+
+<br>
+
+$$
+(price * weightPrice) * (range * weightRange) * (drivetrain * weightDrivetrain)
+$$
+
+<br>
+
+::: panel-tabset
+#### Building Model Two
+
+```{r message = FALSE, warning = FALSE}
+model2 <- function(.data, manufacture, model, price, range, drivetrain){
+  .data |>
+    dplyr::mutate(model_output = ({{price}} * weights$price) * ({{range}} * weights$range) * ({{drivetrain}} * weights$drivetrain)) |>
+    dplyr::select({{manufacture}}, {{model}}, model_output)
+}
+```
+
+#### Model Two Output
+
+```{r eval = FALSE, message = FALSE, warning = FALSE}
+# Applying model two to the vehicle dataset
+vehicles |>
+  model2(manufacture = make,
+         model = model,
+         price = price_value,
+         range = range_value,
+         drivetrain = drivetrain_value)
+```
+
+```{r message = FALSE, warning = FALSE, echo = FALSE}
+# Applying and outputting model two to the vehicle dataset
+df_model2 <- vehicles |>
+  model2(manufacture = make,
+         model = model,
+         price = price_value,
+         range = range_value,
+         drivetrain = drivetrain_value)
+
+df_model2 |>
+  dplyr::arrange(desc(model_output), make, model) |>
+  DT::datatable()
+```
+
+#### Visualizing Model Two
+
+```{r message = FALSE, warning = FALSE, echo = FALSE}
+df_model2 |>
+  ggplot2::ggplot() +
+  aes(x = model_output, y = model) +
+  geom_boxplot(fill = "#153331") +
+  labs(x = "Model Two Output", 
+  y = "Vehicle Make", caption = "Created by: Data Chef") +
+  theme_minimal() +
+  data_chef_theme +
+  theme(legend.title = element_blank(),
+        legend.position = "bottom")
+```
+:::
+
+<br>
+
+The top five electric vehicles identified from *Model Two* are **`r df_model2 |> dplyr::top_n(5, model_output) |> dplyr::mutate(ev_name = paste0(make, " ", model)) |> dplyr::arrange(desc(model_output), make, model) |> dplyr::pull(ev_name)`**
+
+<br> <br>
+
+# In Closing
+
+```{r message = FALSE, warning = FALSE, echo = FALSE}
+# Create data frame for top 5 suggestions from model 1 and 2 with source data features (i.e. price, range, drive train)
+
+df_model_results_top5 <- rbind(
+  dplyr::left_join(
+  df_model1 |>
+    dplyr::top_n(5, model_output) |>
+    dplyr::arrange(desc(model_output), make, model),
+  vehicles,
+  by = c("make", "model")
+) |>
+  dplyr::select(make, model, type, price, range, drivetrain) |>
+  dplyr::mutate(model_id = 1,
+                model_rank = dplyr::row_number()),
+  dplyr::left_join(
+  df_model2 |>
+    dplyr::top_n(5, model_output) |>
+    dplyr::arrange(desc(model_output), make, model),
+  vehicles,
+  by = c("make", "model")
+) |>
+  dplyr::select(make, model, type, price, range, drivetrain) |>
+  dplyr::mutate(model_id = 2,
+                model_rank = dplyr::row_number())
+)
+
+df_model_compare <- dplyr::inner_join(
+  df_model1 |>
+    dplyr::arrange(desc(model_output), make, model) |>
+    dplyr::mutate(model_id = 1,
+                  model1_rank = dplyr::row_number()) |>
+    dplyr::select(1:2, 5),
+  df_model2 |>
+    dplyr::arrange(desc(model_output), make, model) |>
+    dplyr::mutate(model_id = 2,
+                  model2_rank = dplyr::row_number()) |>
+    dplyr::select(1:2, 5),
+  by = c("make", "model")
+)
+```
+
+```{r message = FALSE, warning = FALSE, echo = FALSE}
+# Function to get the main summaries of EV features (min, mean, max)
+get_summaries <- function(.data, var_name){
+  .data |>
+    dplyr::summarize(min = min({{var_name}}),
+                     avg = mean({{var_name}}),
+                     max = max({{var_name}}))
+}
+
+create_inline_price <- function(.data, model_number, var_name, stat_type){
+  paste0(
+    "$",
+    format(
+      .data |>
+        dplyr::filter(model_id == model_number) |>
+        get_summaries({{var_name}}) |>
+        dplyr::pull({{stat_type}}),
+      big.mark = ","
+      )
+    )
+}
+
+create_inline_range <- function(.data, model_number, var_name, stat_type){
+  paste0(
+    as.character(
+      df_model_results_top5 |>
+        dplyr::filter(model_id == model_number) |>
+        get_summaries({{var_name}}) |>
+        dplyr::pull({{stat_type}})
+      ),
+    " kms"
+    )
+}
+```
+
+The top 5 suggestions from each of the models (Model 1 and Model 2) vary slightly. The first **`r as.numeric(df_model_compare |> dplyr::filter(model1_rank == model2_rank, model1_rank <= 5) |> dplyr::count())`** suggestions were the same, identifying **`r df_model_compare |> dplyr::filter(model1_rank == model2_rank, model1_rank <= 5) |> dplyr::mutate(ev_name = paste0(make, " ", model)) |> dplyr::pull(ev_name)`**. The forth and fifth suggestions were different between the two models, with **`r df_model_compare |> dplyr::filter(model1_rank == 4) |> dplyr::mutate(ev_name = paste0(make, " ", model)) |> dplyr::pull(ev_name)`** from Model 1 and **`r df_model_compare |> dplyr::filter(model2_rank == 4) |> dplyr::mutate(ev_name = paste0(make, " ", model)) |> dplyr::pull(ev_name)`** from Model 2 as the forth suggestion, and **`r df_model_compare |> dplyr::filter(model1_rank == 5) |> dplyr::mutate(ev_name = paste0(make, " ", model)) |> dplyr::pull(ev_name)`** from Model 1 and **`r df_model_compare |> dplyr::filter(model2_rank == 5) |> dplyr::mutate(ev_name = paste0(make, " ", model)) |> dplyr::pull(ev_name)`** from Model 2 as the fifth suggestion.
+
+The range in price for the top 5 vehicles from Model 1 was **`r create_inline_price(df_model_results_top5, model_number = 1, var_name = price, stat_type = min)`** to **`r create_inline_price(df_model_results_top5, model_number = 1, var_name = price, stat_type = max)`**, where as Model 2 top 5 vehicles range were **`r create_inline_price(df_model_results_top5, model_number = 2, var_name = price, stat_type = min)`** to **`r create_inline_price(df_model_results_top5, model_number = 2, var_name = price, stat_type = max)`**.
+
+The suggestions from the two models for top 5 vehicles had a difference in driving range. Model 1 had a range from **`r create_inline_range(df_model_results_top5, model_number = 1, var_name = range, stat_type = min)`** to **`r create_inline_range(df_model_results_top5, model_number = 1, var_name = range, stat_type = max)`**, whereas Model 2 had a driving range from **`r create_inline_range(df_model_results_top5, model_number = 2, var_name = range, stat_type = min)`** to **`r create_inline_range(df_model_results_top5, model_number = 2, var_name = range, stat_type = max)`**.
+
+<br>
+
+Suggesting electric vehicles with a driving range under 100 kms is contrary to the design requirements. The weighting of price within the design of Model 1 (adding variables) over valued vehicles with a lower purchase price, whereas the design of Model 2 (multiplying variables) reduced the value of vehicles with an insufficient all electric driving range. For this reason, **Model 2** is the preferred model, suggesting **`r df_model2 |> dplyr::top_n(5, model_output) |> dplyr::mutate(ev_name = paste0(make, " ", model)) |> dplyr::arrange(desc(model_output), make, model) |> dplyr::pull(ev_name)`** as the top electric vehicles.

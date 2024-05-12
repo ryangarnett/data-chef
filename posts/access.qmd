@@ -1,0 +1,30 @@
+---
+title: "Access"
+author: "Ryan Garnett"
+date: "2023-02-10"
+categories: [cooking, data engineering]
+image: "access.png"
+---
+
+::: {style="float:left;position: relative;"}
+![](access.png)
+:::
+
+The beginning of the cooking journey starts with accessing food. Where the food is accessed from, and the amount, has a connection to both what is being prepared, and who is making the meal. There is a significant difference between a four course meal being prepared at a five star restaurant, and someone looking to make a sandwich for their lunch. These differences are reflective in where the food is accessed from.
+
+<br>
+
+The data equivalent is **data access** within the area of data engineering. Access to data is an important factor that is typically overlooked. Considerations on who is accessing the data (application or user), what technical abilities they have, and how much data is required is essential for determining the different methods of access, which may include:
+
+- application programming interface (API)
+- direct connection (database)
+- download (file)
+- managed service
+
+<br>
+
+*Key points*
+
+- identify the type of users
+- understand user's technical abilities
+- determine volume of data needed

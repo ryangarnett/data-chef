@@ -1,0 +1,25 @@
+---
+title: "Ship"
+author: "Ryan Garnett"
+date: "2023-02-06"
+categories: [supply chain, data engineering]
+image: "ship.png"
+---
+
+::: {style="float:left;position: relative;"}
+![](ship.png)
+:::
+
+Following the harvest the plants enter a new journey and are moved from the farm. The plants are bundled and placed into a vehicle to be transported to the next stage. The method and length of the transport depends on the crop, as some require refrigeration, while others do not.
+
+<br>
+
+The data equivalent is **data transit** within the area of data engineering. The purpose of data transit is to move the data from one stage to another. Like with shipping food considerations on how the data is moved (streaming vs. file transfer), and when the data needs to be moved (constantly, or in pieces) is needed in order to build a data pipeline that meets the requirements of the next stage and the users.
+
+<br>
+
+*Key points*
+
+- choose the method that matches the data
+- identify the volume of data to be moved
+- understand the speed needed to move the data

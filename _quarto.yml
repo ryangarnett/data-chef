@@ -1,0 +1,41 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Data Chef"
+  navbar:
+    pinned: true
+    right:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: farm-to-table.qmd
+        text: Farm to Table
+      - href: data-recipes.qmd
+        text: Data Recipes
+      - href: data-stories.qmd
+        text: Data Stories
+  page-footer:
+    center:
+      - text: "&#169; Data Chef"
+  cookie-consent:
+    type: implied
+    style: simple
+    palette: dark
+  google-analytics:
+    tracking-id: "G-5QCPVB2ZGJ"
+    anonymize-ip: false
+
+format:
+  html:
+    theme: style.scss
+    toc: true
+    code-fold: false
+    link-external-icon: true
+    link-external-newwindow: true
+    code-block-border-left: "#00A8D5"
+
+editor: visual
+

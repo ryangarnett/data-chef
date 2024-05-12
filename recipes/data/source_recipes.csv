@@ -1,0 +1,204 @@
+id,section,chapter,recipe_group,recipe,description,difficulty,packages,data
+1,Appetizers,Accessing Packages,Installing Packages,Install a single package,Method to install a single package in R,0,,
+2,Appetizers,Accessing Packages,Installing Packages,Install multiple packages,Method to install multiple packages in R,0,,
+3,Appetizers,Accessing Packages,Loading Packages,Load a single package,Method to load and gain access to the functionality of a package in R,0,,
+4,Appetizers,Creating Objects,Variables,Create a character variable,Create a variable object in memory for a specific character value,0,,
+5,Appetizers,Creating Objects,Variables,Create a numeric variable,Create a variable object in memory for a specific number value,0,,
+6,Appetizers,Creating Objects,Variables,Create a variable from an equation,Create a variable object in memory for a specific mathematical equation,0,,
+7,Appetizers,Creating Objects,Variables,Create a variable from combining variables,Create a variable object in memory by combining two variable objects together,0,,
+8,Appetizers,Creating Objects,Variables,Create a variable from a function,Create a variable object in memory from the output from the system date function,0,,
+9,Appetizers,Creating Objects,Vectors,Create a character vector,Create a vector object in memory that has multiple character values,0,,
+10,Appetizers,Creating Objects,Vectors,Create a numeric vector,Create a vector object in memory that has multiple numeric values,0,,
+11,Appetizers,Creating Objects,Dataframe,Create dataframe with multiple character columns,Create a dataframe object in memory that has multiple character columns,0,,
+12,Appetizers,Creating Objects,Dataframe,Create dataframe with multiple numeric columns,Create a dataframe object in memory that has multiple numeric columns,0,,
+13,Appetizers,Creating Objects,Dataframe,Create dataframe with multiple character and numeric columns,Create a dataframe object in memory that has multiple character and numeric columns,0,,
+14,Appetizers,Preview Data,Data Structure,Preview the structure of a dataframe,Method to inspect the data structure and elements of a dataframe,0,readr,sample_parcel_land_sizes.csv
+15,Appetizers,Preview Data,View Portion of Data,Preview a subset of rows in a dataframe,Method to visually inspect the first few rows of a dataframe,0,readr,sample_parcel_land_sizes.csv
+16,Appetizers,Preview Data,View Portion of Data,Preview a specified number of rows to subset in a dataframe,Method to visually inspect a specific number of rows of a dataframe,0,readr,sample_parcel_land_sizes.csv
+17,Appetizers,Preview Data,View All Data,Preview all rows of a dataframe,Method to visually inspect all rows of a dataframe,0,readr,sample_parcel_land_sizes.csv
+18,Appetizers,Preview Data,View All Data,Preview all rows of a dataframe within a viewer,Method to visually inspect all rows and columns of a dataframe in a sortable viewer,0,readr,sample_parcel_land_sizes.csv
+19,Appetizers,Importing Data,CSV Files,Import csv file on macOS,Basic method for reading a csv file on a macOS computer,1,readr,sample_dwelling_characteristics.csv
+20,Appetizers,Importing Data,CSV Files,Import csv file on Linux,Basic method for reading a csv file on a Linux computer,1,readr,sample_dwelling_characteristics.csv
+21,Appetizers,Importing Data,CSV Files,Import csv file on Windows,Basic method for reading a csv file on a Windows computer,1,readr,sample_dwelling_characteristics.csv
+22,Appetizers,Importing Data,CSV Files,Import csv file from GitHub,Basic method for reading a csv file stored in a GitHub repository,1,readr,sample_dwelling_characteristics.csv
+23,Appetizers,Importing Data,CSV Files,Skip rows on csv import,Skip a number of rows when reading a csv file,1,readr,sample_dwelling_characteristics.csv
+24,Appetizers,Importing Data,CSV Files,Skip blank rows on csv import,Skip all rows that are blank when reading a csv file,1,readr,sample_dwelling_characteristics.csv
+25,Appetizers,Importing Data,CSV Files,Read number of rows on csv import,Read a specific number of rows when reading a csv file,1,readr,sample_dwelling_characteristics.csv
+26,Appetizers,Importing Data,CSV Files,Read specific columns on csv import,Read a specific columns when reading a csv file,1,readr,sample_dwelling_characteristics.csv
+27,Appetizers,Importing Data,Excel Files,Import excel file,Basic method for reading an excel file,1,readxl,sample_housing_data.xlsx
+28,Appetizers,Importing Data,Excel Files,Skip rows on excel import,Skip rows when reading excel files,1,readxl,sample_housing_data.xlsx
+29,Appetizers,Importing Data,Excel Files,Read number of rows on excel import,Read a specific number of rows when reading an excel file,1,readxl,sample_housing_data.xlsx
+30,Appetizers,Importing Data,Excel Files,Read specific sheet on excel import,Read a specific sheet of an excel file,1,readxl,sample_housing_data.xlsx
+31,Appetizers,Importing Data,Excel Files,Read range of cells on excel import,Read a specific range of cells of an excel file,1,readxl,sample_housing_data.xlsx
+,,,,,,,,
+33,Breakfast,Data Exploration,Selecting Data Columns,Select data by column name,Method to subset data using a specific column name,1,readr dplyr,sample_parcel_sales_history.csv
+34,Breakfast,Data Exploration,Selecting Data Columns,Select data by multiple column names,Method to subset data using multiple column names,1,readr dplyr,sample_parcel_sales_history.csv
+35,Breakfast,Data Exploration,Selecting Data Columns,Select data by column index,Method to subset data using specific column index numbers,1,readr dplyr,sample_parcel_sales_history.csv
+36,Breakfast,Data Exploration,Selecting Data Columns,Select data by multiple column index,Method to subset data using a specific column index number,1,readr dplyr,sample_parcel_sales_history.csv
+37,Breakfast,Data Exploration,Selecting Data Columns,Select data by column index range,Method to subset data in a range of column index numbers,1,readr dplyr,sample_parcel_sales_history.csv
+38,Breakfast,Data Exploration,Selecting Data Columns,Select data by column index and column index range,Method to subset data by specific column index numbers and a range of column index numbers,1,readr dplyr,sample_parcel_sales_history.csv
+39,Breakfast,Data Exploration,Selecting Data Columns,Select all by last column,Method to retrieve all columns except the last column,1,readr dplyr,sample_parcel_sales_history.csv
+40,Breakfast,Data Exploration,Filtering Data,Filter single column by character value,Method to filter a single column of character data when equal to a specific value,1,readr dplyr,sample_parcel_sales_history.csv
+41,Breakfast,Data Exploration,Filtering Data,Filter single column by numeric value,Method to filter a single column of numeric data when equal to a specific value,1,readr dplyr,sample_parcel_sales_history.csv
+42,Breakfast,Data Exploration,Filtering Data,Filter single column by multiple character values,Method to filter a single column of character data with multiple character values,1,readr dplyr,sample_parcel_sales_history.csv
+43,Breakfast,Data Exploration,Filtering Data,Filter single column by multiple numeric values,Method to filter a single column of numeric data with multiple numeric values,1,readr dplyr,sample_parcel_sales_history.csv
+44,Breakfast,Data Exploration,Filtering Data,Filter single column by range of numeric values,Method to filter numeric data within a range of values,1,readr dplyr,sample_parcel_sales_history.csv
+45,Breakfast,Data Exploration,Filtering Data,Filter single column by numeric data larger than value,Method to filter number data that is larger than a value,1,readr dplyr,sample_parcel_sales_history.csv
+46,Breakfast,Data Exploration,Filtering Data,Filter single column by numeric data smaller than value,Method to filter numeric data that is smaller than a value,1,readr dplyr,sample_parcel_sales_history.csv
+47,Breakfast,Data Exploration,Filtering Data,Filter multiple columns,Method to filter data using multiple columns when filtering of all columns execute to be true,1,readr dplyr,sample_parcel_sales_history.csv
+48,Breakfast,Data Exploration,Filtering Data,Filter multiple columns,Method to filter data using multiple columns when filtering of any column execute to be true,1,readr dplyr,sample_parcel_sales_history.csv
+49,Breakfast,Data Exploration,Filtering Data,Filter when multiple character values not in a column,Method to filter data when specific text values are not present in a specified column,1,readr dplyr,sample_parcel_sales_history.csv
+50,Breakfast,Data Exploration,Combining Commands,Select specific columns and filter column by character value,Method to combine a select and filter expression in a single command,1,readr dplyr,sample_parcel_sales_history.csv
+51,Breakfast,Data Quality,Data Cleaning,Clean common header naming issues,"Replaces common data header naming conversion issues; such as spaces, special characters, and duplicate names ",1,readr janitor,sample.csv
+52,Breakfast,Data Quality,Data Cleaning,Remove empty columns,Removes columns that have no values and are completely empty,1,readr janitor,sample.csv
+53,Breakfast,Data Quality,Data Cleaning,Remove empty rows,Removes rows that have no values and are completely empty,1,readr janitor,sample.csv
+54,Breakfast,Data Quality,Data Cleaning,Remove empty rows and columns,Removes rows and columns that have no values and are completely empty,1,readr janitor,sample.csv
+55,Breakfast,Data Quality,Data Profiling,Find duplicates in single column,Method to find duplicate values in a single column of a dataframe column,1,readr janitor,sample.csv
+56,Breakfast,Data Quality,Data Profiling,Find duplicates in multiple columns,Method to find duplicate values across multiple columns of a dataframe column,1,readr janitor,sample.csv
+57,Breakfast,Data Quality,Data Cleaning,Convert null to specific character value in a single column,Method to change all null to a specific character value in a single character column of a dataframe,1,readr tidyr,sample.csv
+58,Breakfast,Data Quality,Data Cleaning,Convert null to specific numeric value in a single column,Method to change all null to a specific numeric value in a single numeric column of a dataframe,1,readr tidyr,sample.csv
+59,Breakfast,Data Quality,Data Cleaning,Remove leading whitespace from a character values in a single column,Method to remove whitespace at the beginning of a character value in a single character column of a dataframe,1,readr dplyr stringr,sample.csv
+60,Breakfast,Data Quality,Data Cleaning,Remove trailing whitespace from a character values in a single column,Method to remove whitespace at the end of a character value in a single character column of a dataframe,1,readr dplyr stringr,sample.csv
+61,Breakfast,Data Quality,Data Cleaning,Remove leading and trailing whitespace from a character values in a single column,Method to remove whitespace at the beginning and end of a character value in a single character column of a dataframe,1,readr dplyr stringr,sample.csv
+62,Breakfast,Data Quality,Data Cleaning,Change all characters to lower case in a single column,Method to change all character values to lower case in a single character column of a dataframe,1,readr dplyr stringr,sample.csv
+63,Breakfast,Data Quality,Data Cleaning,Change all characters to upper case in a single column,Method to change all character values to upper case in a single character column of a dataframe,1,readr dplyr stringr,sample.csv
+64,Breakfast,Data Quality,Data Cleaning,Change all characters to title case in a single column,Method to change all character values to title case in a single character column of a dataframe,1,readr dplyr stringr,sample.csv
+65,Breakfast,Data Quality,Data Cleaning,Change all characters to sentence case in a single column,Method to change all character values to sentence case in a single character column of a dataframe,1,readr dplyr stringr,sample.csv
+66,Breakfast,Data Quality,Data Cleaning,Remove punctuation from a single character column,Method to remove punctuation including special characters from a single character column of a dataframe,1,readr dplyr stringr,sample.csv
+67,Breakfast,Data Quality,Data Cleaning,Change all spaces to underscores in a single character column,Method to change all spaces to an underscore in a single character column of a dataframe,1,readr dplyr stringr,sample.csv
+68,Breakfast,Data Quality,Data Cleaning,Convert null with specific value in all character columns,Method to change all null to a specific character value in a all character columns of a dataframe,2,readr dplyr tidyr,sample.csv
+69,Breakfast,Data Quality,Data Cleaning,Convert null with specific value in all numeric columns,Method to change all null to a specific numeric value in a all numeric columns of a dataframe,2,readr dplyr tidyr,sample.csv
+70,Breakfast,Data Quality,Data Cleaning,Remove whitespace in all character columns,Method to remove whitespace at the beginning and end of a character value in all character columns of a dataframe,2,readr dplyr stringr,sample.csv
+71,Breakfast,Data Quality,Data Cleaning,Change all characters to lower case in all character columns,Method to change all character values to lower case in all character columns of a dataframe,2,readr dplyr stringr,sample.csv
+72,Breakfast,Data Quality,Data Cleaning,Change all characters to upper case in all character columns,Method to change all character values to upper case in all character columns of a dataframe,2,readr dplyr stringr,sample.csv
+73,Breakfast,Data Quality,Data Cleaning,Change all characters to title case in all character columns,Method to change all character values to title case in all character columns of a dataframe,2,readr dplyr stringr,sample.csv
+74,Breakfast,Data Quality,Data Cleaning,Change all characters to sentence case in all character columns,Method to change all character values to sentence case in all character columns of a dataframe,2,readr dplyr stringr,sample.csv
+75,Breakfast,Data Quality,Data Cleaning,Remove punctuation from all character columns,Method to remove punctuation including special characters from all character columns of a dataframe,2,readr dplyr stringr,sample.csv
+76,Breakfast,Data Quality,Data Cleaning,Change all spaces to underscores in all character columns,Method to change all spaces to an underscore in a single character column of a dataframe,2,readr dplyr stringr,sample.csv
+77,Breakfast,Data Quality,Data Cleaning,Clean structure and values of a dataframe,Method to cleann the structure and values in all character and numeric columns of a dataframe,2,readr dplyr janitor stringr tidyr,sample.csv
+78,Appetizers,Accessing Packages,Installing Packages,Load multiple packages,Method to load and gain access to the functionality of multiple packages in R,0,,
+79,Breakfast,Data Transformation,Between Data Types,Change character data type to numeric data type in single column,Method to change all character values to numeric values in a single column of a dataframe,1,readr dplyr,sample.csv
+80,Breakfast,Data Transformation,Between Data Types,Change numeric data type to character data type in single column,Method to change all numeric values to character values in a single column of a dataframe,1,readr dplyr,sample.csv
+81,Breakfast,Data Transformation,Between Data Types,Change character data type to date data type in single column,Method to change all character values to date values in a single column of a dataframe,1,readr dplyr,sample.csv
+82,Breakfast,Data Transformation,Between Data Types,Change all character data columns to numeric data,Method to change all character values to numeric values in all character columns of a dataframe,1,readr dplyr,sample.csv
+83,Breakfast,Data Transformation,Between Data Types,Change all numeric data columns to character data,Method to change all numeric values to character values in all numeric columns of a dataframe,1,readr dplyr,sample.csv
+84,Breakfast,Data Transformation,Between Data Types,Change all character data columns to date data,Method to change all character values to date values in all character columns of a dataframe,1,readr dplyr,sample.csv
+85,Breakfast,Data Transformation,Between Data Types,Change character data type to numeric data type in selected columns,Method to change all character values to numeric values in selected character columns of a dataframe,1,readr dplyr,sample.csv
+86,Breakfast,Data Transformation,Between Data Types,Change numeric data type to character data type in selected columns,Method to change all numeric values to character values in selected numeric columns of a dataframe,1,readr dplyr,sample.csv
+87,Breakfast,Data Transformation,Between Data Types,Change character data type to date data type in selected columns,Method to change all character values to date values in selected character columns of a dataframe,1,readr dplyr,sample.csv
+88,Breakfast,Combing Data,Appending Dataframes,Add a dataframe to bottom of a dataframe,Method to add rows from a dataframe that has the same columns to the bottom of another dataframe,1,readr,sample1.csv sample2.csv
+89,Breakfast,Combing Data,Appending Dataframes,Add a dataframe to the right of a dataframe,Method to add columns from a dataframe to the right of the existing columns in another dataframe,1,readr,sample1.csv sample2.csv
+90,Breakfast,Combing Data,Joining Dataframes,Join with same joining column names,Method to join two dataframes when the joining column name is the same in both dataframes,1,readr dplyr,sample1.csv sample2.csv
+91,Breakfast,Combing Data,Joining Dataframes,Join with different joining names,Method to join two dataframes when the joining column name is different between the dataframes,1,readr dplyr,sample1.csv sample2.csv
+92,Breakfast,Combing Data,Joining Dataframes,Join with subset of columns from one dataframe,Method to join two dataframes whiles reducing the number of columns from one dataframe,1,readr dplyr,sample1.csv sample2.csv
+93,Breakfast,Combing Data,Joining Dataframes,Join with subset of columns from two dataframes,Method to join two dataframes whiles reducing the number of columns from both dataframes,1,readr dplyr,sample1.csv sample2.csv
+94,Breakfast,Combing Data,Joining Dataframes,Join matching rows in both dataframes,Method to join two dataframes when rows between both dataframes match,1,readr dplyr,sample1.csv sample2.csv
+95,Breakfast,Combing Data,Joining Dataframes,Join matching rows from the second dataframe to the first dataframe,Method to join matching rows from the second dataframe to the first dataframe,1,readr dplyr,sample1.csv sample2.csv
+96,Breakfast,Combing Data,Joining Dataframes,Join matching rows from the first dataframe to the first dataframe,Method to join matching rows from the first dataframe to the first dataframe,1,readr dplyr,sample1.csv sample2.csv
+97,Breakfast,Combing Data,Joining Dataframes,Join all rows regardless of matching,Method to join regardless of matching between both dataframes,1,readr dplyr,sample1.csv sample2.csv
+98,Breakfast,Combing Data,Joining Dataframes,Filter dataframe where matching rows between dataframes,Method to filter rows in first dataframe that match the second dataframe,1,readr dplyr,sample1.csv sample2.csv
+99,Breakfast,Combing Data,Joining Dataframes,Filter dataframe where non-matching rows between dataframes,Method to filter rows in first dataframe that do not match the second dataframe,1,readr dplyr,sample1.csv sample2.csv
+100,Breakfast,Modifying Data,Static Value,Change or create a single character column with a static character value,Method to change or create a character column with a single specific character value,1,readr dplyr,sample.csv
+101,Breakfast,Modifying Data,Static Value,Change or create a single numeric column with a static numeric value,Method to change or create a numeric column with a single specific numeric value,1,readr dplyr,sample.csv
+102,Breakfast,Modifying Data,Static Value,Change a single date column with a static date value,Method to change a date column with a single specific date value,1,readr dplyr,sample.csv
+103,Breakfast,Modifying Data,Static Value,Change or create multiple character columns with a static character value,Method to change or create multiple character columns with a single specific character value,1,readr dplyr,sample.csv
+104,Breakfast,Modifying Data,Static Value,Change or create multiple numeric columns with a static numeric value,Method to change or create multiple numeric columns with a single specific numeric value,1,readr dplyr,sample.csv
+105,Breakfast,Modifying Data,Static Value,Change multiple date columns with a static date value,Method to change multiple date columns with a single specific date value,1,readr dplyr,sample.csv
+106,Breakfast,Modifying Data,Static Value,Create a new date column with a static date value,Method to create a new date column with a single specific date value,1,readr dplyr,sample.csv
+107,Breakfast,Modifying Data,Static Value,Create multiple new date columns with a static date value,Method to create multiple new date columns with a single specific date value,1,readr dplyr,sample.csv
+108,Breakfast,Modifying Data,Using Existing Column(s),Create new character column from static text and a character column,Method to create a new character column by combining values from a character column with static text,1,readr dplyr,sample.csv
+109,Breakfast,Modifying Data,Using Existing Column(s),Create new character column from multiple character columns,Method to create a new character column by combining values from multiple character columns,1,readr dplyr,sample.csv
+110,Breakfast,Modifying Data,Using Existing Column(s),Create new character column from multiple character columns and static text,Method to create a new character column by combining values from multiple character columns separated by a static text value,1,readr dplyr,sample.csv
+111,Breakfast,Modifying Data,Using Existing Column(s),Create new numeric column from a numeric column and a mathematical operation,Method to create a new numeric column by combining values from a numeric column and using a mathematical operation,1,readr dplyr,sample.csv
+112,Breakfast,Modifying Data,Using Existing Column(s),Create new numeric column from multiple numeric columns and mathematical operations,Method to create a new numeric column by combining values from multiple numeric column and using a mathematical operation,1,readr dplyr,sample.csv
+113,Breakfast,Modifying Data,Using Existing Column(s),Create new numeric column from a numeric column and a function,Method to create a new numeric column by combining values from a numeric column and using a function,1,readr dplyr,sample.csv
+114,Breakfast,Modifying Data,Using Existing Column(s),Create new date column from a date column and a mathematical operation,Method to create a new date column by combining values from a date column and using a mathematical operation,1,readr dplyr,sample.csv
+115,Breakfast,Modifying Data,Using Existing Column(s),Create new date column from multiple date columns and mathematical operations,Method to create a new date column by combining values from multiple date column and using a mathematical operation,1,readr dplyr,sample.csv
+116,Breakfast,Modifying Data,Using Existing Column(s),Create new date column from a date column and a function,Method to create a new date column by combining values from a date column and using a function,1,readr dplyr lubridate,sample.csv
+117,Breakfast,Modifying Data,Conditionally from Existing Column,Create new character column conditionally from existing numeric column with default static value,Method to create a new character column by using a conditional statement from an existing numeric column adding a static default value,1,readr dplyr,sample.csv
+118,Breakfast,Modifying Data,Conditionally from Existing Column,Create new character column conditionally from range of values in existing numeric column with default static value,Method to create a new character column by using a conditional statement from a range of values in an existing numeric column adding a static default value,2,readr dplyr,sample.csv
+119,Breakfast,Modifying Data,Conditionally from Existing Column,Create new character column conditionally with default static value,Method to create a new character column by using a conditional statement adding a static default value,2,readr dplyr,sample.csv
+120,Breakfast,Modifying Data,Conditionally from Existing Column,Create new character column conditionally with character column as default value,Method to create a new character column by using a conditional statement adding default values from a character column,2,readr dplyr,sample.csv
+121,Breakfast,Modifying Data,Conditionally from Existing Column,Create new character column conditionally from specific values in a character column,Method to create a new character column by using a conditional statement from specific values from a character column,1,readr dplyr,sample.csv
+122,Lunch,Aggregating Data,Single Column,Get the unique values within a column,Method to get all unique values within a single column of a dataframe,1,readr dplyr,sample.csv
+123,Lunch,Aggregating Data,Single Column,Get the unique values and their frequency within a column,Method to get all unique values and their frequency within a single column of a dataframe,1,readr dplyr,sample.csv
+124,Lunch,Aggregating Data,Single Column,Get the unique values and their frequency within a column while ordering from the smallest value,Method to get all unique values and ordering their frequency from smallest to largest within a single column of a dataframe,1,readr dplyr,sample.csv
+125,Lunch,Aggregating Data,Single Column,Get the unique values and their frequency within a column while ordering from the largest value,Method to get all unique values and ordering their frequency from largest to smallest within a single column of a dataframe,1,readr dplyr,sample.csv
+126,Lunch,Aggregating Data,Multiple Columns,Get the unique values in multiple columns,Method to get all unique values in multiple columns of a dataframe,1,readr dplyr,sample.csv
+127,Lunch,Aggregating Data,Multiple Columns,Get the unique values and their frequency in multiple columns,Method to get all unique values and their frequency in multiple columns of a dataframe,1,readr dplyr,sample.csv
+128,Lunch,Aggregating Data,Multiple Columns,Get the unique values and their frequency in multiple columns while ordering the smallest value in a column,Method to get all unique values and ordering their frequency from smallest to largest within a multiple columns of a dataframe,1,readr dplyr,sample.csv
+129,Lunch,Aggregating Data,Multiple Columns,Get the unique values and their frequency in multiple columns while ordering the largest value in a column,Method to get all unique values and ordering their frequency from largest to smallest within a single column of a dataframe,1,readr dplyr,sample.csv
+130,Lunch,Descriptive Analysis,Single Column,Find minimum value in a numeric column,Method to find the minimum value of a numeric column in a dataframe,1,readr dplyr,sample.csv
+131,Lunch,Descriptive Analysis,Single Column,Find maximum value in a numeric column,Method to find the maximum value of a numeric column in a dataframe,1,readr dplyr,sample.csv
+132,Lunch,Descriptive Analysis,Single Column,Calculate mean value in a numeric column,Method to calculate the mean value of a numeric column in a dataframe,1,readr dplyr,sample.csv
+133,Lunch,Descriptive Analysis,Single Column,Calculate median value in a numeric column,Method to calculate the median value of a numeric column in a dataframe,1,readr dplyr,sample.csv
+134,Lunch,Descriptive Analysis,Single Column,Calculate standard deviation in a numeric column,Method to calculate the standard deviation of a numeric column in a dataframe,1,readr dplyr,sample.csv
+135,Lunch,Descriptive Analysis,Single Column,Round calculated mean value in a numeric column,Method to calculate the mean value of a numeric column and round to one decimal place in a dataframe,1,readr dplyr,sample.csv
+136,Lunch,Descriptive Analysis,Single Column,Calculate multiple descriptive statistics of a numeric column,Method to calculate multiple descriptive statistics from a numeric column in a dataframe,1,readr dplyr,sample.csv
+137,Lunch,Descriptive Analysis,Single Column,Calculate sum of a numeric column,Method to calculate the total sum of a numeric column in a dataframe,1,readr dplyr,sample.csv
+138,Supper,Data Visualization,Creating a plot,Create a bar plot,Method to create a bar plot from a single character column,2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+139,Supper,Data Visualization,Creating a plot,Create a box plot,Method to create a box plot from both a character and numeric column,2,readr magrittr ggplot2,sample_dwelling_characteristics.csv
+140,Supper,Data Visualization,Creating a plot,Create a histogram plot,Method to create a histogram plot from a single numeric column,2,readr magrittr ggplot2,sample_dwelling_characteristics.csv
+141,Supper,Data Visualization,Creating a plot,Create a line plot,Method to create a line plot from two numeric columns,2,readr dplyr ggplot2,sample_parcel_assessed_value.csv
+142,Supper,Data Visualization,Creating a plot,Create a scatter plot,Method to create a scatter plot from two numeric columns,2,readr magrittr ggplot2,sample_dwelling_characteristics.csv
+143,Supper,Data Visualization,Visualizing dimensions,Apply single fill colour to a plot,Method to add a single colour to a bar plot,2,readr magrittr ggplot2,sample_dwelling_characteristics.csv
+144,Supper,Data Visualization,Visualizing dimensions,Apply a single colour to a line/point plot,Method to add a single colour to a scatter plot,2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+145,Supper,Data Visualization,Visualizing dimensions,Change plot fill colour by column values,Method to change the fill colour of a bar plot by the values in a column,2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+146,Supper,Data Visualization,Visualizing dimensions,Change plot line/point colour by column values,Method to change the colour of a scatter plot by the values in a column,2,readr magrittr ggplot2,sample_dwelling_characteristics.csv
+147,Supper,Data Visualization,Visualizing dimensions,Change point plot size by numeric column,Method to change the size of points of a scatter plot by the value in a column,2,readr magrittr ggplot2,sample_dwelling_characteristics.csv
+148,Supper,Data Visualization,Add text to a plot,Add title to a plot,Method to add title to a plot,2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+149,Supper,Data Visualization,Add text to a plot,Add subtitle to a plot,Method to add subtitle to a plot,2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+150,Supper,Data Visualization,Add text to a plot,Add x-axis label to a plot,Method to add x-axis label to a plot,2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+151,Supper,Data Visualization,Add text to a plot,Add y-axis label to a plot,Method to add y-axis label to a plot,2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+152,Supper,Data Visualization,Add text to a plot,Add caption to a plot,Method to add caption to a plot,2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+153,Supper,Data Visualization,Customizing a plot,Add theme to a plot,Method to add theme to a plot,2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+154,Supper,Data Visualization,Customizing a plot,Remove major x/y grid line,Method to remove major x/y grid line,2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+155,Supper,Data Visualization,Customizing a plot,Remove minor x/y grid line,Method to remove minor x/y grid line,2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+156,Supper,Data Visualization,Customizing a plot,Change major x/y grid line (colour/style),Method to change major x/y grid line (colour/style),2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+157,Supper,Data Visualization,Customizing a plot,Change minor x/y grid line (colour/style),Method to change minor x/y grid line (colour/style),2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+158,Supper,Data Visualization,Customizing a plot,Change legend position,Method to change legend position,2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+159,Supper,Data Visualization,Customizing a plot,Remove legend,Method to remove legend,2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+160,Supper,Data Visualization,Customizing a plot,Change legend font (colour/style),Method to change legend font (colour/style),2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+161,Supper,Data Visualization,Customizing a plot,Remove legend title,Method to remove legend title,2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+162,Supper,Data Visualization,Customizing a plot,Remove x/y axis text,Method to remove x/y axis text,2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+163,Supper,Data Visualization,Customizing a plot,Change x/y axis font (colour/size),Method to change x/y axis font (colour/size),2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+164,Supper,Data Visualization,Customizing a plot,Change legend item font (colour/size),Method to change legend item font (colour/size),2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+165,Supper,Data Visualization,Customizing a plot,Wrap x axis text,Method to wrap x axis text,2,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+166,Supper,Data Visualization,Customizing a plot,Stitch it all together,Method to stitch all ggplot2 options together,3,readr dplyr ggplot2,sample_dwelling_characteristics.csv
+167,Dessert,Dashboard Elements,Static Elements,Dynamic text,,2,flexdashboard,
+168,Dessert,Dashboard Elements,Static Elements,Value box,,2,flexdashboard,
+169,Dessert,Dashboard Elements,Static Elements,Gauge,,2,flexdashboard,
+170,Dessert,Dashboard Elements,Static Elements,Chart,,2,flexdashboard,
+171,Dessert,Dashboard Elements,Static Elements,Table,,2,flexdashboard,
+172,Dessert,Dashboard Elements,Dynamic Elements,Dynamic text,,3,flexdashboard,
+173,Dessert,Dashboard Elements,Dynamic Elements,Value box,,3,flexdashboard,
+174,Dessert,Dashboard Elements,Dynamic Elements,Gauge,,3,flexdashboard,
+175,Dessert,Dashboard Elements,Dynamic Elements,Chart,,3,flexdashboard,
+176,Dessert,Dashboard Elements,Dynamic Elements,Table,,3,flexdashboard,
+177,Dessert,Dashboard Elements,Customizing Elements,Background,,3,flexdashboard,
+178,Dessert,Dashboard Elements,Customizing Elements,Font,,3,flexdashboard,
+179,Dessert,Dashboard Elements,Customizing Elements,Google font,,3,flexdashboard,
+180,Dessert,Dashboard Elements,Customizing Elements,Size,,3,flexdashboard,
+181,Supper,Presentation Tables,Format Table Elements,Format single numeric column,,,,
+182,Supper,Presentation Tables,Format Table Elements,Format single character column,,,,
+183,Supper,Presentation Tables,Format Table Elements,Format columns by column index,,,,
+184,Supper,Presentation Tables,Format Table Elements,Format columns by vector of column names,,,,
+185,Supper,Presentation Tables,Format Table Elements,Format all numeric columns,,,,
+186,Supper,Presentation Tables,Format Table Elements,Format all character columns,,,,
+187,Supper,Presentation Tables,Format Table Elements,Change column names manually,,,,
+188,Supper,Presentation Tables,Format Table Elements,Change column names logically (remove _ and title case),,,,
+189,Supper,Presentation Tables,Format Table Elements,Add spanner column,,,,
+190,Supper,Presentation Tables,Format Table Elements,Add table title,,,,
+191,Supper,Presentation Tables,Format Table Elements,Add table subtitle,,,,
+192,Supper,Presentation Tables,Format Table Elements,Add single source notes,,,,
+193,Supper,Presentation Tables,Format Table Elements,Add multi line source note,,,,
+194,Supper,Presentation Tables,Style Table Elements,,,,,
+,,,,Style table title,,,,
+,,,,Style table subtitle,,,,
+,,,,Style spanner column,,,,
+,,,,Style source notes,,,,
+,,,,Style cell manually,,,,
+,,,,Style column manually,,,,
+,,,,Style row manually,,,,
+,,,,Style cell conditionally,,,,
+,,,,Style row conditionally,,,,

@@ -1,0 +1,37 @@
+---
+title: "Cook"
+author: "Ryan Garnett"
+date: "2023-02-12"
+categories: [cooking, data analytics]
+image: "cook.png"
+---
+
+::: {style="float:left;position: relative;"}
+![](cook.png)
+:::
+
+The most *glamorous* part of farm to table journey is cooking; it is where the magic happens, the transformation of a raw source into something tasty. There are many different approaches, methods, and considerations that are needed when cooking a meal. Generally a cooking method is chosen (BBQ, bake, boil, fry, etc.) which is incorporated into series of steps outlined in the recipe .
+
+
+<br>
+
+The data equivalent is **data analysis** within the area of data analytics. Following the journey from collection, engineering, and wrangling, the data is ready for analysis. There are many different analysis methods available, each with benefits and limitations:
+
+- classification
+- descriptive
+- geospatial
+- inferential
+- machine learning / artificial intelligence
+- predictive
+- prescriptive
+
+
+Similar with cooking a meal where the cooking method needs to be paired with the appropriate food and situation, the analysis method used should fit the need of the question to be explored and the available data.
+
+<br>
+
+*Key points*
+
+- identify the question that is to be explored
+- select the method that suits the needs
+- ensure their is adequate volume of data

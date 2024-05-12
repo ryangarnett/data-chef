@@ -1,0 +1,30 @@
+---
+title: "Plate"
+author: "Ryan Garnett"
+date: "2023-02-13"
+categories: [cooking, data analytics]
+image: "plate.png"
+---
+
+::: {style="float:left;position: relative;"}
+![](plate.png)
+:::
+
+When the plants reach the end of their growing season the harvest begins. A harvest can take many forms, depending on the food that is being harvested. A single harvest method will not apply to all food sources, some can use large machinery, while others require delicate manual interaction. Harvest time is also a significant consideration, as certain plants need to be harvested immediately, whereas others have a longer grace period.
+
+<br>
+
+The data equivalent is **data presentation** within the area of data analytics. There is a tight connection between the analysis, presentation, and delivery of the data. The delivery must be representative of the analysis, while reflecting the available methods of delivery. There are many important elements to consider in order to present data effectively, which are tightly related to the analysis performed and the available delivery method: 
+
+- dynamic vs. static
+- data vs. dashboard vs. report
+- KPI or metric
+
+
+<br>
+
+*Key points*
+
+- understand the audience and purpose
+- ensure selected method matches available delivery options
+- determine the expected level of detail required

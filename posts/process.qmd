@@ -1,0 +1,25 @@
+---
+title: "Process"
+author: "Ryan Garnett"
+date: "2023-02-07"
+categories: [supply chain, data engineering]
+image: "process.png"
+---
+
+::: {style="float:left;position: relative;"}
+![](process.png)
+:::
+
+After being shipped from the farm the plants are evaluated to identify their relative quality, which determines the potential usage. Consider an apple, various factors (i.e. shape, visual appearance, size, number of bruises, etc.) will decide its end usage. That decision will set in motion if the apple should be juiced, pureed into apple sauce, cut and frozen, or used as-is.
+
+<br>
+
+The data equivalent is **data transformation** within the area of data engineering. In many cases the data collected is not ready for consumption in all use cases. Like with food, data needs to be profiled to identify any defects and determine what transformations (reshape, filter, aggregate, summarize, etc.), what data quality issues (data types, missing values, values out-of-range, etc.), and how to clean identified dirty data.
+
+<br>
+
+*Key points*
+
+- perform data profiling
+- review quality of data
+- reshape, transform, and clean data

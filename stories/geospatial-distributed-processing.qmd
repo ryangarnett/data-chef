@@ -1,0 +1,16 @@
+---
+title: "Geospatial Distributed Processing"
+author: "Ryan Garnett"
+date: "2023-01-23"
+categories: [data, distributed processing, geospatial]
+---
+
+Everything happens somewhere. Location is an important factor when people make decisions that influences various life decisions, from buying a house, choosing a school, to vacations, or selecting a restaurant to eat out at. Within the data space utilizing location data is becoming increasingly important in data analysis, data science, and machine learning. Data wrangling is an integral part of data science, typically occupying a significant portion of time and effort, with location data adding to the complexity.
+
+Location data can be large, consisting of hundreds of thousands to billions of observations in a single dataset. With location-based analysis consistently utilizing multiple datasets, the time to complete the analysis can be lengthy. Similar to other data analytics, the majority of location-based analysis tasks are performed sequentially using a single processor on a computer, even though many of the operations performed have no dependency on the other data or their outcome; if only there were another way…well, let me introduce you to distributed location-based processing.
+
+What is distributed processing? In short, distributed processing is the use of multiple computer processors to execute a single computational task. A distributed process is executed by splitting a task into smaller chunks which are simultaneously performed on multiple processors. We can use distributed processing to make our code run faster, sometimes much faster. For large geospatial datasets that require a lot of computational power, distributed processing can reduce the time needed to handle complex data manipulation.
+
+In this post, we’ll explore different techniques for wrangling location data, the processing time required for each, and the significant improvements that can be seen with distributed processing.
+
+[Full story on Posit](https://posit.co/blog/geospatial-distributed-processing-with-furrr/)

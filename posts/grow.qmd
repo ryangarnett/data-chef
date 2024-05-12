@@ -1,0 +1,36 @@
+---
+title: "Grow"
+author: "Ryan Garnett"
+date: "2023-02-04"
+categories: [farming, data collection]
+image: "grow.png"
+---
+
+::: {style="float:left;position: relative;"}
+![](grow.png)
+:::
+
+The food cycle starts with planting seeds. There is more to growing food the just putting seeds in the ground and letting them grow. There are many factors that are required to be successful many factors. Select the location that as the proper amount of sun, the correct soil type, and the required space is one of the first consideration needed. Once the planting location has been selected the growing area needs to be prepared, by adding extra nutrients to help plants grow within their early stages. While plants are growing they require attention such as watering, weeding, and additional nutrients based on their growth.
+
+<br>
+
+The data equivalent is **data collection**. The collection of data is the beginning of all data journeys, and like growing plants, there are many things to consider and undertake. Data collection follows five basic questions: what, who, when, where, and how. <br>
+
+
+*What* data needs to be collected. For example, user feedback, traffic volumes, environmental conditions, product usage, etc.
+
+*Who* is the target "audience" of the data collection
+
+*When* should the data be collected
+
+*Where* is the optimal location to be collecting the data
+
+*How* will the data be collected, the method or instrument that will be used to collect the data (i.e. survey, interview, sensor, field collection, etc.)
+
+<br>
+
+*Key points*
+
+- identify the audience
+- select the collection method
+- structure the inputs that are being collected

@@ -1,0 +1,31 @@
+---
+title: "Store"
+author: "Ryan Garnett"
+date: "2023-02-09"
+categories: [supply chain, data engineering]
+image: "store.png"
+---
+
+::: {style="float:left;position: relative;"}
+![](store.png)
+:::
+
+The final stage in a food's supply chain journey is storage. A number of options are available (i.e. market, grocery store, warehouse, etc.) each designed and suited for different food choices. Following the example of the apple from previous posts, a bag of frozen apple slices would be better suited for a grocery store or warehouse, rather than a farmer's market.
+
+<br>
+
+The data equivalent is **data storage** within the area of data engineering. Selecting a data storage system that is not inline with the intended use case can introduce significant limitations and challenges. When deciding on a data storage system there are a number of factors to consider, such as:
+
+- cloud or on-premise or hybrid
+- enterprise or local
+- structured or unstructured
+- database or file
+- row or columnar
+
+<br>
+
+*Key points*
+
+- understand the type of use
+- understand the usage volume
+- understand the volume of data

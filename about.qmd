@@ -1,0 +1,26 @@
+---
+title: "About"
+image: data-chef-icon-green-fill.png
+about:
+  template: jolla
+  links:
+    - icon: mastodon
+      text: Mastodon
+      href: https://mastodon.social/@datachef
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/company/the-data-chef/
+    - icon: github
+      text: Github
+      href: https://codeberg.org/data-chef
+---
+
+Data and analytics are becoming important aspects in more organizations, with many making significant investments in the data domain. Utilizing data and analytics can help organizations or any size and from all industries. However, the implementation and transformation toward a *data driven* organization has tended to focus on needs of large tech-based organizations. Much of the data transformation journey has focused on highly technical areas like big data, real-time data streaming, machine learning, and artificial intelligence. While extremely important, powerful, and important, not all organizations require the bleeding edge of data analytics. This over emphasis has made it very difficult for smaller organizations, or those early in their data maturity to implement data analytics into their organizational culture.
+
+<br>
+
+**Data Chef** is looking to help by demystifying the data and analytics domain through knowledge sharing with data content designed for a wide range of users, not just those with high technical abilities and understanding. A wide range of content covering data literacy, data governance, data management, and analytics, for all...not just large tech organizations.
+
+<br>
+
+If you have data needs <a href = "mailto: ryan.garnett@data-chef.ca">reach out via email</a>

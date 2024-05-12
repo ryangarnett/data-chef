@@ -1,0 +1,30 @@
+id,make,model,type,drivetrain,range,price
+1,Ford,Mustang Mach-e Select,EV,RWD,397,57000
+2,Ford,Mustang Mach-e California Route 1,EV,AWD,502,79120
+3,Nissan,Ariya,EV,AWD,490,53000
+4,Nissan,Leaf SV,EV,FWD,342,41250
+5,Kia,Niro EV,EV,FWD,407,48100
+6,Kia,Niro PHEV,PHEV,FWD,53,33840
+7,Chevy,Bolt EV,EV,FWD,417,41550
+8,Chevy,Bold EUV,EV,FWD,397,43150
+9,Jeep,4-Door Willys,PHEV,4WD,56,58280
+10,Jeep,Grand Cherokee 4XE,PHEV,4WD,68,79830
+11,VW,ID.4,EV,RWD,336,46050
+12,VW,ID.4 Pro AWD,EV,AWD,410,55050
+13,Subaru,Solterra,EV,AWD,360,54300
+14,Toyota,Prius Prime,PHEV,FWD,40,36790
+15,Toyota,RAV4 Prime SE AWD,PHEV,AWD,68,53060
+16,Mitsubishi,Outlander PHEV,PHEV,AWD,61,46540
+17,Mazda,MX-30,EV,FWD,161,42650
+18,Hyundai,Ioniq 5 Preferred,EV,RWD,386,49000
+19,Hyundai,Ioniq 5 Preferred Long Range,EV,RWD,507,53000
+20,Hyundai,Ioniq 5 Preferred AWD Long Range,EV,AWD,480,57660
+21,Hyundai,Kona Preffered,EV,FWD,304,44600
+22,Hyundai,Kona Ultimate,EV,FWD,483,49700
+23,Hyundai,Tuscon Luxury Plug-in Hybrid AWD,PHEV,AWD,52,40100
+24,Tesla,Model 3,EV,RWD,438,54990
+25,Tesla,Model 3 Performance,EV,AWD,438,72990
+26,Tesla,Model Y Long Range,EV,AWD,531,69990
+27,BMW,i4 eDrive35,EV,RWD,418,58260
+28,BMW,i4 M50,EV,AWD,394,80770
+29,Hyundai,Santa Fe Luxury Plug-in Hybrid AWD,PHEV,AWD,50,45000

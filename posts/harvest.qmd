@@ -1,0 +1,25 @@
+---
+title: "Harvest"
+author: "Ryan Garnett"
+date: "2023-02-05"
+categories: [farming, data engineering]
+image: "grow.png"
+---
+
+::: {style="float:left;position: relative;"}
+![](harvest.png)
+:::
+
+When the plants reach the end of their growing season the harvest begins. A harvest can take many forms, depending on the food that is being harvested. A single harvest method will not apply to all food sources, some can use large machinery, while others require delicate manual interaction. Harvest time is also a significant consideration, as certain plants need to be harvested immediately, whereas others have a longer grace period.
+
+<br>
+
+The data equivalent is **data extraction** within the area of data engineering. The extraction of data is the starting point of data pipelines. Similar to harvesting plants there are considerations when extracting data, such as what data is to be extracted (all tables from a source, specific columns), when the extraction should occur (specific time, reoccurring time, ad hoc), how the data should be extracted (manual vs. automated), and where is the data being extracted from (structured/unstructured data, database, file, service, etc.). Understanding these components will assist with developing a data extraction method.
+
+<br>
+
+*Key points*
+
+- select the extraction method that fits the data source
+- design for the data source
+- determine the intended usage pattern

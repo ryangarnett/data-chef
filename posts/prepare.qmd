@@ -1,0 +1,25 @@
+---
+title: "Prepare"
+author: "Ryan Garnett"
+date: "2023-02-11"
+categories: [cooking, data wrangling]
+image: "prepare.png"
+---
+
+::: {style="float:left;position: relative;"}
+![](prepare.png)
+:::
+
+Prior to cooking most food require some level of preparation, such as being pealed, copped, sliced, mixed, or marinaded. The preparation may include phases where multiple ingredients are combined together before the cooking portion begins. The steps taken will depend on the recipe that is being cooked, as not all meals require the same type, or level, of preparation.
+
+<br>
+
+The data equivalent is **data wranging**. The extraction of data is the starting point of data pipelines. Similar to harvesting plants there are considerations when extracting data, such as what data is to be extracted (all tables from a source, specific columns), when the extraction should occur (specific time, reoccurring time, ad hoc), how the data should be extracted (manual vs. automated), and where is the data being extracted from (structured/unstructured data, database, file, service, etc.). Understanding these components will assist with developing a data extraction method.
+
+<br>
+
+*Key points*
+
+- select the extraction method that fits the data source
+- design for the data source
+- determine the intended usage pattern

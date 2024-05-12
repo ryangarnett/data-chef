@@ -1,0 +1,12 @@
+---
+title: "Speed Up Data Analytics"
+author: "Ryan Garnett, Ray Wong, Dan Reed"
+date: "2022-04-26"
+categories: [data, data analytics, data wrangling, Parquet]
+---
+
+Data is increasing in value for many organizations — an asset leveraged to help make informed business decisions. Unfortunately, this sentiment has not been the norm throughout the life of most organizations, with vast amounts of data locked in legacy data management systems and designs. The majority of organizations use relational database management systems (RDBMS) like Oracle, Postgres, Microsoft SQL, or MySQL to store and manage their enterprise data. Typically these systems were designed to collect and process data quickly within a transactional data model. While these models are excellent for applications, they can pose challenges for performing business intelligence, data analytics, or predictive analysis. Many organizations are realizing their legacy systems are not sufficient for data analytics initiatives, providing an opportunity for analytics teams to present tangible options to improve their organization’s data analytics infrastructure.
+
+Regardless if you are engineering data for others to consume for analysis, or performing the analytics, reducing the time to perform data processing is critically important. Within this post, we are going to evaluate the performance of two distinct data storage formats; row-based (CSV) and columnar (parquet); with CSV being a tried and tested standard data format used within the data analytics field, and parquet becoming a viable alternative in many data platforms.
+
+[Full story on Posit](https://posit.co/blog/speed-up-data-analytics-with-parquet-files/)

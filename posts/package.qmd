@@ -1,0 +1,25 @@
+---
+title: "Package"
+author: "Ryan Garnett"
+date: "2023-02-08"
+categories: [supply chain, data engineering]
+image: "package.png"
+---
+
+::: {style="float:left;position: relative;"}
+![](package.png)
+:::
+
+After the plants have undergone processing they are put into an appropriate package to assist with the next stages of the journey. The packaging is dependent on the type of processing that was performed. Reconsidering an the apple from processing, different containers will be chosen for apple juice than that of apple sauce, frozen apple slices, or apples that will be sold as fresh produce.
+
+<br>
+
+The data equivalent is **data model** within the area of data engineering. Like with food data is better consumed when the packaging matches it's intended use. When creating a data model considerations of how the data will be used (i.e. record management, analytics, relationships, etc.) will influence what data model (transactional, analytical, graph, relational) is required. Many data usage cases cannot be resolved with a single data model, meaning multiple data models may be needed.
+
+<br>
+
+*Key points*
+
+- determine all potential uses of the data
+- identify the appropriate data model(s)
+- design the data model structure and elements

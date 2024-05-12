@@ -1,0 +1,31 @@
+---
+listing:
+  contents: posts
+  type: default
+  sort: "date"
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [title, categories, author, date, reading-time]
+  image-align: right
+page-layout: full
+title-block-banner: true
+date-format: iso
+---
+
+<center>![](farm2table-flow.png)</center>
+
+<br>
+
+<p>
+
+Data is becoming increasingly important to more organizations, however understanding the lifecycle and all the different aspects that are associated to the data space can be challenging. Data literacy is an important, under appreciated, component of a data organization. The concept of farm to table is used to explain the stages and progression within a data related initiative.
+
+> **Farm to table** <br> Noting or relating to the stages involved in the growing, processing, and consumption of food
+
+</p>
+
+<br>
+
+::: {#posts}
+:::

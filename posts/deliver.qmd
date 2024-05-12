@@ -1,0 +1,33 @@
+---
+title: "Deliver"
+author: "Ryan Garnett"
+date: "2023-02-14"
+categories: [customer experience, information delivery]
+image: "deliver.png"
+---
+
+::: {style="float:left;position: relative;"}
+![](deliver.png)
+:::
+
+When the meal is complete the last stage in the food journey is delivery. There are different options to getting a meal in the hands of a customer, such as dine-in, take-out, or self-serve (i.e. buffet). The different delivery methods contribute to the overall customer experience, requiring different levels of involvement from customers.
+
+<br>
+
+The data equivalent is **information delivery** within the area of customer experience. Getting the analysis in the hands of users can take many forms, depending on the findings, and the audience. Choosing a delivery method should be reflective of both the analysis and the user's needs and abilities. Common data delivery methods are:
+
+- application
+- data service
+- email attachment
+- notification
+- scheduled
+- self-service
+
+
+<br>
+
+*Key points*
+
+- understand the audience
+- identify the frequency
+- understand limitations and challenges
