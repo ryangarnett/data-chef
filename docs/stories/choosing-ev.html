@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Ryan Garnett">
+<meta name="dcterms.date" content="2023-04-14">
+
+<title>Data Chef - Choosing an Electric Vehicle</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5QCPVB2ZGJ"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-5QCPVB2ZGJ', { 'anonymize_ip': false});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"dark",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
+
+<script src="../site_libs/htmlwidgets-1.6.3/htmlwidgets.js"></script>
+<link href="../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="../site_libs/datatables-binding-0.30/datatables.js"></script>
+<script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="../site_libs/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="../site_libs/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet">
+<script src="../site_libs/dt-core-1.13.4/js/jquery.dataTables.min.js"></script>
+<link href="../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Data Chef</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../farm-to-table.html">
+ <span class="menu-text">Farm to Table</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../data-recipes.html">
+ <span class="menu-text">Data Recipes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../data-stories.html">
+ <span class="menu-text">Data Stories</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Choosing an Electric Vehicle</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">EV</div>
+                <div class="quarto-category">modelling</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Ryan Garnett </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 14, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#purpose" id="toc-purpose" class="nav-link active" data-scroll-target="#purpose">Purpose</a></li>
+  <li><a href="#story-setup" id="toc-story-setup" class="nav-link" data-scroll-target="#story-setup">Story Setup</a></li>
+  <li><a href="#data-exploration" id="toc-data-exploration" class="nav-link" data-scroll-target="#data-exploration">Data Exploration</a></li>
+  <li><a href="#modelling" id="toc-modelling" class="nav-link" data-scroll-target="#modelling">Modelling</a>
+  <ul class="collapse">
+  <li><a href="#feature-engineering" id="toc-feature-engineering" class="nav-link" data-scroll-target="#feature-engineering">Feature Engineering</a></li>
+  <li><a href="#designing-a-model" id="toc-designing-a-model" class="nav-link" data-scroll-target="#designing-a-model">Designing a Model</a>
+  <ul class="collapse">
+  <li><a href="#model-one" id="toc-model-one" class="nav-link" data-scroll-target="#model-one">Model One</a></li>
+  <li><a href="#model-two" id="toc-model-two" class="nav-link" data-scroll-target="#model-two">Model Two</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#in-closing" id="toc-in-closing" class="nav-link" data-scroll-target="#in-closing">In Closing</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="purpose" class="level1">
+<h1>Purpose</h1>
+<p>Electric vehicles (EV) are increasing in popularity, by both the consumer and automakers. There are a significant number of EV available on the market, each having different features and characteristics. With EVs being relatively new to the vehicle market, it can be very difficult to know which EVs to consider as a new vehicle. Within this story we will present a <em>data driven</em> approach for making an informed decision when looking for new electric vehicles. A number of EVs will be evaluated based on objective features, omitting things like appearance, style, etc. A custom analytical model will be created to analyze the features and suggest the top electric vehicles.</p>
+</section>
+<section id="story-setup" class="level1 tabset">
+<h1 class="tabset">Story Setup</h1>
+<p>In order to tell a data story there are certain things that are required (i.e.&nbsp;packages, importing data, custom functions, etc.). This section outlines the required pieces to tell our data story.</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Load Packages</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Import Dataset</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Custom ggplot2 Theme</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Data access package</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Data wrangling package</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Data presentation packages</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Data about electric vehicles (manufacture, model, type, price, range, and drive train) were collected during the third week of March 2023, using Nova Scotia Canada as a location for calculating pricing. The type of electric vehicle was broken into two group full electric (EV) and plug-in hybrid electric (PHEV); non plug-in hybrid vehicles were omitted from the data collection.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Data collected on electric vehicles</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Luxury electric vehicles were omitted from data collection</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>vehicles <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"https://codeberg.org/data-chef/data-stories/raw/branch/main/data-stories-blogsite/stories/data/ev-vehicles.csv"</span>, <span class="at">col_types =</span> <span class="fu">cols</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Custom theme</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data_chef_theme <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">theme</span>(</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Text -- title, subtitle, labels, and caption</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> ggplot2<span class="sc">::</span><span class="fu">element_text</span>(<span class="at">colour =</span> <span class="st">"#404040"</span>, <span class="at">size =</span> <span class="dv">14</span>, <span class="at">family =</span> <span class="st">"Roboto"</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> ggplot2<span class="sc">::</span><span class="fu">element_text</span>(<span class="at">colour =</span> <span class="st">"#404040"</span>, <span class="at">size =</span> <span class="dv">12</span>, <span class="at">family =</span> <span class="st">"Roboto"</span>),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.x =</span> ggplot2<span class="sc">::</span><span class="fu">element_text</span>(<span class="at">colour =</span> <span class="st">"#404040"</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">family =</span> <span class="st">"Roboto"</span>),</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.y =</span> ggplot2<span class="sc">::</span><span class="fu">element_text</span>(<span class="at">colour =</span> <span class="st">"#404040"</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">family =</span> <span class="st">"Roboto"</span>),</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.title =</span> ggplot2<span class="sc">::</span><span class="fu">element_text</span>(<span class="at">colour =</span> <span class="st">"#404040"</span>, <span class="at">size =</span> <span class="dv">8</span>, <span class="at">family =</span> <span class="st">"Roboto"</span>),</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.text =</span> ggplot2<span class="sc">::</span><span class="fu">element_text</span>(<span class="at">colour =</span> <span class="st">"#404040"</span>, <span class="at">size =</span> <span class="dv">8</span>, <span class="at">family =</span> <span class="st">"Roboto"</span>),</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> ggplot2<span class="sc">::</span><span class="fu">element_text</span>(<span class="at">colour =</span> <span class="st">"#404040"</span>, <span class="at">size =</span> <span class="dv">8</span>, <span class="at">family =</span> <span class="st">"Roboto"</span>),</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y =</span> ggplot2<span class="sc">::</span><span class="fu">element_text</span>(<span class="at">colour =</span> <span class="st">"#404040"</span>, <span class="at">size =</span> <span class="dv">8</span>, <span class="at">family =</span> <span class="st">"Roboto"</span>),</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.caption =</span> ggplot2<span class="sc">::</span><span class="fu">element_text</span>(<span class="at">colour =</span> <span class="st">"#404040"</span>, <span class="at">size =</span> <span class="dv">6</span>, <span class="at">family =</span> <span class="st">"Roboto"</span>),</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Chart elements -- grids</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major.x =</span> ggplot2<span class="sc">::</span><span class="fu">element_blank</span>(),</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major.y =</span> ggplot2<span class="sc">::</span><span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">"#BFBFBF"</span>, <span class="at">linetype =</span> <span class="st">"dotted"</span>, <span class="at">linewidth =</span> <span class="fl">0.3</span>),</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor.x =</span> ggplot2<span class="sc">::</span><span class="fu">element_blank</span>(),</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor.y =</span> ggplot2<span class="sc">::</span><span class="fu">element_blank</span>(),</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<p><br> <br></p>
+</section>
+<section id="data-exploration" class="level1">
+<h1>Data Exploration</h1>
+<p>An essential aspect of all data analysis is exploring the data. Through the exploration you become familiar with the elements that are available within the dataset(s), as well as the potential analysis that can be performed with the dataset(s).</p>
+<p>There were <strong>29</strong> vehicles from <strong>13</strong> car manufactures being evaluated.</p>
+<p><br></p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Tabular View</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Electric Vehicle Types</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Electric Vehicle Characteristics by Price</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="datatables html-widget html-fill-item" id="htmlwidget-035eee53ba0efe2493d4" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-035eee53ba0efe2493d4">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29"],["BMW","BMW","Chevy","Chevy","Ford","Ford","Hyundai","Hyundai","Hyundai","Hyundai","Hyundai","Hyundai","Hyundai","Jeep","Jeep","Kia","Kia","Mazda","Mitsubishi","Nissan","Nissan","Subaru","Tesla","Tesla","Tesla","Toyota","Toyota","VW","VW"],["i4 M50","i4 eDrive35","Bold EUV","Bolt EV","Mustang Mach-e California Route 1","Mustang Mach-e Select","Ioniq 5 Preferred","Ioniq 5 Preferred AWD Long Range","Ioniq 5 Preferred Long Range","Kona Preffered","Kona Ultimate","Santa Fe Luxury Plug-in Hybrid AWD","Tuscon Luxury Plug-in Hybrid AWD","4-Door Willys","Grand Cherokee 4XE","Niro EV","Niro PHEV","MX-30","Outlander PHEV","Ariya","Leaf SV","Solterra","Model 3","Model 3 Performance","Model Y Long Range","Prius Prime","RAV4 Prime SE AWD","ID.4","ID.4 Pro AWD"],["EV","EV","EV","EV","EV","EV","EV","EV","EV","EV","EV","PHEV","PHEV","PHEV","PHEV","EV","PHEV","EV","PHEV","EV","EV","EV","EV","EV","EV","PHEV","PHEV","EV","EV"],["AWD","RWD","FWD","FWD","AWD","RWD","RWD","AWD","RWD","FWD","FWD","AWD","AWD","4WD","4WD","FWD","FWD","FWD","AWD","AWD","FWD","AWD","RWD","AWD","AWD","FWD","AWD","RWD","AWD"],[394,418,397,417,502,397,386,480,507,304,483,50,52,56,68,407,53,161,61,490,342,360,438,438,531,40,68,336,410],[80770,58260,43150,41550,79120,57000,49000,57660,53000,44600,49700,45000,40100,58280,79830,48100,33840,42650,46540,53000,41250,54300,54990,72990,69990,36790,53060,46050,55050]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>make<\/th>\n      <th>model<\/th>\n      <th>type<\/th>\n      <th>drivetrain<\/th>\n      <th>range<\/th>\n      <th>price<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[5,6]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Distribution of EV and PHEV vehicles</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="choosing-ev_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>Distribution of vehicles by type, price, and drive train</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="choosing-ev_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br> <br></p>
+</section>
+<section id="modelling" class="level1">
+<h1>Modelling</h1>
+<p>When developing a model specific parameters are needed in order to make an objective evaluation. The main constraint for this model was the ability to drive exclusively using electric power, without limitations (i.e.&nbsp;city, highway, etc.). Because of this requirement only pure electric vehicles and plug-in hybrid vehicles were considered.</p>
+<p>There key factors to the model are</p>
+<ul>
+<li>Affordability</li>
+<li>Driving range</li>
+<li>Drive train</li>
+</ul>
+<p><br></p>
+<p><strong>Affordability</strong> <br> The purchase cost of the vehicle is a very important factor for many. The <em>price</em> is considered the advertised price pre taxes, in Canadian dollars, based on a purchase in Nova Scotia. Federal and provincial EV incentives were excluded.</p>
+<p><br></p>
+<p><strong>Driving range</strong> <br> The EVs primary usage would be for daily commuting, with a round trip distance of ~60 kms, with the need for extended distance to account for slight variations that are likely to occur daily (i.e.&nbsp;running errands, construction detours, etc.). While daily commuting is the main purpose for the EV, it would be great to be able to use the vehicle for other reasons, specifically lifestyle related activities, such as camping, surfing, skiing, or staycation road trips. The addition of lifestyle means a greater driving range would be desirable.</p>
+<p><br></p>
+<p><strong>Drive train</strong> <br> Seasonal variations can have significant impacts on driving conditions in Nova Scotia. The weather during the spring, fall, and winter can produce challenging driving conditions. One method to combat difficult road conditions is to have a drive train system that provides more traction.</p>
+<p><br> <br></p>
+<section id="feature-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="feature-engineering">Feature Engineering</h2>
+<p>The format of the data collected on the EVs is not conducive to support the design of the model. Rather than modifying the source data (i.e.&nbsp;changing the values to reflected the desired data format values) new features, or attributes, will be created using the source values.</p>
+<blockquote class="blockquote">
+<p>Feature engineering entails reformatting predictor values to make them easier for a model to use effectively. This includes transformations and encoding of the data to be represent their important characteristics <br> <em>Tidy Modeling with R</em> <br> <em>Max Kuhn &amp; Julie Silge</em></p>
+</blockquote>
+<p>Source data elements were used to created three features for use in the model. New features were encoding using values of 0, 1, 3, 6, and 9 providing a clear distinction between the values of the feature.</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Price</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Range</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Drive Train</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false">Engineered Dataset</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>The following was used when creating new price features</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Price Range</strong></th>
+<th style="text-align: center;"><strong>Feature Encoding</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Less than $30,000</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">$30,000 to $40,000</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">$40,000 to $50,000</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">$50,000 to $60,000</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Greater than $60,000</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to create new feature</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Specific to electric vehicle price</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>create_price_feature <span class="ot">&lt;-</span> <span class="cf">function</span>(.data, price_column){</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  .data <span class="sc">|&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">price_value =</span> dplyr<span class="sc">::</span><span class="fu">case_when</span>(</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    {{price_column}} <span class="sc">&lt;</span> <span class="dv">30000</span> <span class="sc">~</span> <span class="dv">9</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">between</span>({{price_column}}, <span class="dv">30000</span>, <span class="dv">40000</span>) <span class="sc">~</span> <span class="dv">6</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">between</span>({{price_column}}, <span class="dv">40000</span>, <span class="dv">50000</span>) <span class="sc">~</span> <span class="dv">3</span>,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">between</span>({{price_column}}, <span class="dv">50000</span>, <span class="dv">60000</span>) <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    {{price_column}} <span class="sc">&gt;</span> <span class="dv">60000</span> <span class="sc">~</span> <span class="dv">0</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p>The following was used when creating new driving range (in kilometres) features</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Driving Range</strong></th>
+<th style="text-align: center;"><strong>Feature Encoding</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Greater than 500km</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">400 to 500km</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">300 to 400km</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">200 to 300km</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Less than 200km</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to create new feature</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Specific to electric vehicle range</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>create_range_feature <span class="ot">&lt;-</span> <span class="cf">function</span>(.data, range_column){</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  .data <span class="sc">|&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">range_value =</span> dplyr<span class="sc">::</span><span class="fu">case_when</span>(</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    {{range_column}} <span class="sc">&gt;</span> <span class="dv">500</span> <span class="sc">~</span> <span class="dv">9</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">between</span>({{range_column}}, <span class="dv">400</span>, <span class="dv">500</span>) <span class="sc">~</span> <span class="dv">6</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">between</span>({{range_column}}, <span class="dv">300</span>, <span class="dv">400</span>) <span class="sc">~</span> <span class="dv">3</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">between</span>({{range_column}}, <span class="dv">200</span>, <span class="dv">300</span>) <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    {{range_column}} <span class="sc">&lt;</span> <span class="dv">200</span> <span class="sc">~</span> <span class="dv">0</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<p>The following was used when creating new drive train features</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Drive Train</strong></th>
+<th style="text-align: center;"><strong>Feature Encoding</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Four wheel drive (4WD)</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">All wheel drive (AWD)</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Front wheel drive (FWD)</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Rear wheel drive (RWD)</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to create new feature</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Specific to electric vehicle drivetrain</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>create_drivetrain_feature <span class="ot">&lt;-</span> <span class="cf">function</span>(.data, drivetrain_column){</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  .data <span class="sc">|&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">drivetrain_value =</span> dplyr<span class="sc">::</span><span class="fu">case_when</span>(</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    {{drivetrain_column}} <span class="sc">==</span> <span class="st">"4WD"</span> <span class="sc">~</span> <span class="dv">9</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    {{drivetrain_column}} <span class="sc">==</span> <span class="st">"AWD"</span> <span class="sc">~</span> <span class="dv">6</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    {{drivetrain_column}} <span class="sc">==</span> <span class="st">"FWD"</span> <span class="sc">~</span> <span class="dv">3</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    {{drivetrain_column}} <span class="sc">==</span> <span class="st">"RWD"</span> <span class="sc">~</span> <span class="dv">1</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>vehicles <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">create_drivetrain_feature</span>(drivetrain) <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">create_range_feature</span>(range) <span class="sc">|&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">create_price_feature</span>(price) <span class="sc">|&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  DT<span class="sc">::</span><span class="fu">datatable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div class="datatables html-widget html-fill-item" id="htmlwidget-b6338f5e771369625bb1" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-b6338f5e771369625bb1">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29"],[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29],["Ford","Ford","Nissan","Nissan","Kia","Kia","Chevy","Chevy","Jeep","Jeep","VW","VW","Subaru","Toyota","Toyota","Mitsubishi","Mazda","Hyundai","Hyundai","Hyundai","Hyundai","Hyundai","Hyundai","Tesla","Tesla","Tesla","BMW","BMW","Hyundai"],["Mustang Mach-e Select","Mustang Mach-e California Route 1","Ariya","Leaf SV","Niro EV","Niro PHEV","Bolt EV","Bold EUV","4-Door Willys","Grand Cherokee 4XE","ID.4","ID.4 Pro AWD","Solterra","Prius Prime","RAV4 Prime SE AWD","Outlander PHEV","MX-30","Ioniq 5 Preferred","Ioniq 5 Preferred Long Range","Ioniq 5 Preferred AWD Long Range","Kona Preffered","Kona Ultimate","Tuscon Luxury Plug-in Hybrid AWD","Model 3","Model 3 Performance","Model Y Long Range","i4 eDrive35","i4 M50","Santa Fe Luxury Plug-in Hybrid AWD"],["EV","EV","EV","EV","EV","PHEV","EV","EV","PHEV","PHEV","EV","EV","EV","PHEV","PHEV","PHEV","EV","EV","EV","EV","EV","EV","PHEV","EV","EV","EV","EV","EV","PHEV"],["RWD","AWD","AWD","FWD","FWD","FWD","FWD","FWD","4WD","4WD","RWD","AWD","AWD","FWD","AWD","AWD","FWD","RWD","RWD","AWD","FWD","FWD","AWD","RWD","AWD","AWD","RWD","AWD","AWD"],[397,502,490,342,407,53,417,397,56,68,336,410,360,40,68,61,161,386,507,480,304,483,52,438,438,531,418,394,50],[57000,79120,53000,41250,48100,33840,41550,43150,58280,79830,46050,55050,54300,36790,53060,46540,42650,49000,53000,57660,44600,49700,40100,54990,72990,69990,58260,80770,45000],[1,6,6,3,3,3,3,3,9,9,1,6,6,3,6,6,3,1,1,6,3,3,6,1,6,6,1,6,6],[3,9,6,3,6,0,6,3,0,0,3,6,3,0,0,0,0,3,9,6,3,6,0,6,6,9,6,3,0],[1,0,1,3,3,6,3,3,1,0,3,1,1,6,1,3,3,3,1,1,3,3,3,1,0,0,1,0,3]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>id<\/th>\n      <th>make<\/th>\n      <th>model<\/th>\n      <th>type<\/th>\n      <th>drivetrain<\/th>\n      <th>range<\/th>\n      <th>price<\/th>\n      <th>drivetrain_value<\/th>\n      <th>range_value<\/th>\n      <th>price_value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,6,7,8,9,10]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br> <br></p>
+</section>
+<section id="designing-a-model" class="level2">
+<h2 class="anchored" data-anchor-id="designing-a-model">Designing a Model</h2>
+<p>The idea behind the model is to combine the three variables into a single value that can be used to objectively suggest which EVs meet the needs of the user. Using this idea, there are two methods to <em>combine</em> the variables, adding or multiplying. For this story two models will be designed, one using an additive approach, and the other using a multiply approach.</p>
+<p>A critical aspect of the model is to have a weighting factor for each of the variables. The thought behind this was that some variables are more important than others.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>weights <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">price =</span> <span class="fl">0.6</span>, <span class="at">range =</span> <span class="fl">0.3</span>, <span class="at">drivetrain =</span> <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Model Variable Weights</strong></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Variable</th>
+<th style="text-align: center;">Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><em>Price</em></td>
+<td style="text-align: center;">0.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><em>Range</em></td>
+<td style="text-align: center;">0.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><em>Drivetrain</em></td>
+<td style="text-align: center;">0.1</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<section id="model-one" class="level3">
+<h3 class="anchored" data-anchor-id="model-one">Model One</h3>
+<p>The approach of this model is to apply the variable weight to each variable and <strong>add</strong> each variable together</p>
+<p><br></p>
+<p><span class="math display">\[
+(price * weightPrice) + (range * weightRange) + (drivetrain * weightDrivetrain)
+\]</span></p>
+<p><br></p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Building Model One</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Model One Output</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false">Visualizing Model One</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="cf">function</span>(.data, manufacture, model, price, range, drivetrain){</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  .data <span class="sc">|&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">model_output =</span> ({{price}} <span class="sc">*</span> weights<span class="sc">$</span>price) <span class="sc">+</span> ({{range}} <span class="sc">*</span> weights<span class="sc">$</span>range) <span class="sc">+</span> ({{drivetrain}} <span class="sc">*</span> weights<span class="sc">$</span>drivetrain)) <span class="sc">|&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">select</span>({{manufacture}}, {{model}}, model_output)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Applying model one to the vehicle dataset</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>vehicles <span class="sc">|&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">model1</span>(<span class="at">manufacture =</span> make,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">model =</span> model,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">price =</span> price_value,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">range =</span> range_value,</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">drivetrain =</span> drivetrain_value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="datatables html-widget html-fill-item" id="htmlwidget-202348badb26f9360039" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-202348badb26f9360039">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29"],["Chevy","Hyundai","Kia","Kia","Toyota","Hyundai","Ford","Tesla","Chevy","Hyundai","Hyundai","Nissan","Nissan","VW","Hyundai","VW","BMW","Tesla","Hyundai","Hyundai","Mitsubishi","Tesla","Subaru","Mazda","Ford","BMW","Jeep","Toyota","Jeep"],["Bolt EV","Kona Ultimate","Niro EV","Niro PHEV","Prius Prime","Ioniq 5 Preferred Long Range","Mustang Mach-e California Route 1","Model Y Long Range","Bold EUV","Ioniq 5 Preferred AWD Long Range","Kona Preffered","Ariya","Leaf SV","ID.4 Pro AWD","Ioniq 5 Preferred","ID.4","i4 eDrive35","Model 3","Santa Fe Luxury Plug-in Hybrid AWD","Tuscon Luxury Plug-in Hybrid AWD","Outlander PHEV","Model 3 Performance","Solterra","MX-30","Mustang Mach-e Select","i4 M50","4-Door Willys","RAV4 Prime SE AWD","Grand Cherokee 4XE"],[3.899999999999999,3.899999999999999,3.899999999999999,3.899999999999999,3.899999999999999,3.4,3.3,3.3,3,3,3,3,3,3,2.8,2.8,2.5,2.5,2.4,2.4,2.4,2.4,2.1,2.1,1.6,1.5,1.5,1.2,0.9]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>make<\/th>\n      <th>model<\/th>\n      <th>model_output<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="choosing-ev_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>The top five electric vehicles identified from <em>Model One</em> are <strong>Chevy Bolt EV, Hyundai Kona Ultimate, Kia Niro EV, Kia Niro PHEV, Toyota Prius Prime</strong></p>
+<p><br> <br></p>
+</section>
+<section id="model-two" class="level3">
+<h3 class="anchored" data-anchor-id="model-two">Model Two</h3>
+<p>The approach of this model is to apply the variable weight to each variable and <strong>multiply</strong> each variable together</p>
+<p><br></p>
+<p><span class="math display">\[
+(price * weightPrice) * (range * weightRange) * (drivetrain * weightDrivetrain)
+\]</span></p>
+<p><br></p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Building Model Two</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">Model Two Output</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false">Visualizing Model Two</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="cf">function</span>(.data, manufacture, model, price, range, drivetrain){</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  .data <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">model_output =</span> ({{price}} <span class="sc">*</span> weights<span class="sc">$</span>price) <span class="sc">*</span> ({{range}} <span class="sc">*</span> weights<span class="sc">$</span>range) <span class="sc">*</span> ({{drivetrain}} <span class="sc">*</span> weights<span class="sc">$</span>drivetrain)) <span class="sc">|&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">select</span>({{manufacture}}, {{model}}, model_output)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Applying model two to the vehicle dataset</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>vehicles <span class="sc">|&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">model2</span>(<span class="at">manufacture =</span> make,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">model =</span> model,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">price =</span> price_value,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">range =</span> range_value,</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">drivetrain =</span> drivetrain_value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="datatables html-widget html-fill-item" id="htmlwidget-c577d343d2bedf6be2e3" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c577d343d2bedf6be2e3">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29"],["Chevy","Hyundai","Kia","Hyundai","Nissan","VW","Chevy","Hyundai","Nissan","Subaru","Hyundai","Hyundai","VW","BMW","Tesla","Ford","BMW","Ford","Hyundai","Hyundai","Jeep","Jeep","Kia","Mazda","Mitsubishi","Tesla","Tesla","Toyota","Toyota"],["Bolt EV","Kona Ultimate","Niro EV","Ioniq 5 Preferred AWD Long Range","Ariya","ID.4 Pro AWD","Bold EUV","Kona Preffered","Leaf SV","Solterra","Ioniq 5 Preferred Long Range","Ioniq 5 Preferred","ID.4","i4 eDrive35","Model 3","Mustang Mach-e Select","i4 M50","Mustang Mach-e California Route 1","Santa Fe Luxury Plug-in Hybrid AWD","Tuscon Luxury Plug-in Hybrid AWD","4-Door Willys","Grand Cherokee 4XE","Niro PHEV","MX-30","Outlander PHEV","Model 3 Performance","Model Y Long Range","Prius Prime","RAV4 Prime SE AWD"],[0.972,0.972,0.972,0.648,0.648,0.648,0.486,0.486,0.486,0.324,0.162,0.162,0.162,0.108,0.108,0.05399999999999999,0,0,0,0,0,0,0,0,0,0,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>make<\/th>\n      <th>model<\/th>\n      <th>model_output<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="choosing-ev_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>The top five electric vehicles identified from <em>Model Two</em> are <strong>Chevy Bolt EV, Hyundai Kona Ultimate, Kia Niro EV, Hyundai Ioniq 5 Preferred AWD Long Range, Nissan Ariya, VW ID.4 Pro AWD</strong></p>
+<p><br> <br></p>
+</section>
+</section>
+</section>
+<section id="in-closing" class="level1">
+<h1>In Closing</h1>
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<p>The top 5 suggestions from each of the models (Model 1 and Model 2) vary slightly. The first <strong>3</strong> suggestions were the same, identifying <strong>Chevy Bolt EV, Hyundai Kona Ultimate, Kia Niro EV</strong>. The forth and fifth suggestions were different between the two models, with <strong>Kia Niro PHEV</strong> from Model 1 and <strong>Hyundai Ioniq 5 Preferred AWD Long Range</strong> from Model 2 as the forth suggestion, and <strong>Toyota Prius Prime</strong> from Model 1 and <strong>Nissan Ariya</strong> from Model 2 as the fifth suggestion.</p>
+<p>The range in price for the top 5 vehicles from Model 1 was <strong>$33,840</strong> to <strong>$49,700</strong>, where as Model 2 top 5 vehicles range were <strong>$41,550</strong> to <strong>$57,660</strong>.</p>
+<p>The suggestions from the two models for top 5 vehicles had a difference in driving range. Model 1 had a range from <strong>40 kms</strong> to <strong>483 kms</strong>, whereas Model 2 had a driving range from <strong>407 kms</strong> to <strong>490 kms</strong>.</p>
+<p><br></p>
+<p>Suggesting electric vehicles with a driving range under 100 kms is contrary to the design requirements. The weighting of price within the design of Model 1 (adding variables) over valued vehicles with a lower purchase price, whereas the design of Model 2 (multiplying variables) reduced the value of vehicles with an insufficient all electric driving range. For this reason, <strong>Model 2</strong> is the preferred model, suggesting <strong>Chevy Bolt EV, Hyundai Kona Ultimate, Kia Niro EV, Hyundai Ioniq 5 Preferred AWD Long Range, Nissan Ariya, VW ID.4 Pro AWD</strong> as the top electric vehicles.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ © Data Chef
+  </li>  
+</ul>
+      <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+  </div>
+</footer>
+
+
+
+</body></html>
