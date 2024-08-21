@@ -54,5 +54,14 @@
       "/recipes/load-multiple-packages.html",
       "/recipes/load-single-package.html"
     ]
+  },
+  {
+    "listing": "/data-think.html",
+    "items": [
+      "/recipes/analytics-evolution.html",
+      "/recipes/about-ai.html",
+      "/recipes/accuracy-vs-precision.html",
+      "/recipes/macro-personas.html"
+    ]
   }
 ]

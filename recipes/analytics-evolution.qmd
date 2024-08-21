@@ -1,0 +1,143 @@
+---
+title: "Analytical Journey"
+author: "Ryan Garnett"
+date: "2024-08-16"
+categories: [analysis, artificial intelligence, descriptive, predictive, prescriptive]
+draft: false
+---
+
+In the world of data analytics there are many different analytical methods available. Understanding what can be done with the different methods can be challenging and confusing. An analytics journey within an organization typically starts with with historical reporting, with long term aspirations of moving into machine learning and artificial intelligence.
+
+Between the two endpoints, reporting and artificial intelligence, are a number of different options. Moving along the analytics journey the methods increase in complexity.
+
+```{r message = FALSE, warning = FALSE, echo = FALSE}
+library(gt)
+
+data_chef_colours <- c(dark_green = "#153331",
+                       mid_green = "#1E6E6E",
+                       lite_green = "#9FC2B9",
+                       orange = "#E74F2C",
+                       red = "#A62014"
+                       )
+
+
+a1 <- fontawesome::fa(name = "angles-left", data_chef_colours[[1]], width = "3em")
+a2 <- fontawesome::fa(name = "star", fill = data_chef_colours[[1]], width = "3em", prefer_type = "solid")
+a3 <- fontawesome::fa(name = "dice", data_chef_colours[[1]], width = "3em")
+a4 <- fontawesome::fa(name = "object-group", data_chef_colours[[1]], width = "3em")
+a5 <- fontawesome::fa(name = "angles-right", data_chef_colours[[1]], width = "3em")
+a6 <- fontawesome::fa(name = "hand-holding", data_chef_colours[[1]], width = "3em")
+a7 <- fontawesome::fa(name = "brain", data_chef_colours[[1]], width = "3em")
+
+data.frame(
+rbind(
+  c(purrr::map(a1, gt::html), purrr::map(a2, gt::html), purrr::map(a3, gt::html), purrr::map(a4, gt::html), purrr::map(a5, gt::html), purrr::map(a6, gt::html), purrr::map(a7, gt::html)),
+  c("What happened", "Is what happened significant", "Chances of something happening", "What is similar", "What could happen", "How to take action", "Continually evolving")
+  )
+) |>
+  gt::gt() |>
+  gt::tab_spanner(label = gt::md("**Basic**"), 
+                  columns = X1) |>
+  gt::tab_spanner(label = gt::md("**Intermediate**"), 
+                  columns = c(X2, X3)) |>
+  gt::tab_spanner(label = gt::md("**Advance**"), 
+                  columns = c(X4, X5, X6, X7)) |>
+  gt::cols_label(X1 = "Reporting",
+                 X2 = "Inference",
+                 X3 = "Probability",
+                 X4 = "Clustering",
+                 X5 = "Prediction",
+                 X6 = "Prescriptive",
+                 X7 = "Artifical Intelligence") |>
+  gt::tab_options(column_labels.background.color = data_chef_colours[[3]]) |>
+  gt::tab_style(style = gt::cell_fill(color = data_chef_colours[[1]]),
+                locations = gt::cells_column_spanners(spanners = tidyr::everything())
+                ) |>
+  gt::opt_table_font(font = list(
+    gt::google_font(name = "Quicksand"))
+    )
+```
+
+<br>
+
+## What Happened
+
+`r a1`
+
+The use of this method is retrospective, providing insight on things that have happened. Examples of *what happened* are:
+
+-   How many products were sold last month
+-   What is the average number of visitors on a Friday
+-   What is the minimum amount of time spent visiting a site
+
+<br>
+
+## Is What Happened Significant
+
+`r a2`
+
+The use of this method is to make estimates of a population, or drawing conclusion of a hypothesis. Examples of *is what happened significant* are:
+
+-   Was yesterdays usage normal
+-   Is the increase in energy usage an outlier
+-   Was the amount of precipitation last month an anomaly
+
+<br>
+
+## Chances of Something Happening
+
+`r a3`
+
+The use of this method is to estimate the likelihood of an event happening. Examples of *chances of something happening* are:
+
+-   If a weather event will cause a travel delay
+-   Possibility of a customer making a return
+-   Likelihood of client using a new service
+
+<br>
+
+## What is Similar
+
+`r a4`
+
+The use of this method is to identify groups that share similar properties. Examples of *what is similar* are:
+
+-   Create customer profile segmentation
+-   Classify travel delays
+-   Identify hotspots where health outbreaks occurred
+
+<br>
+
+## What Could Happen
+
+`r a5`
+
+The use of this method is to forecast potential future outcomes. Examples of *what could happen* are:
+
+-   Estimate wait time under different conditions
+-   Forecast new service usage
+-   Scenario planning
+
+<br>
+
+## How to Take Action
+
+`r a6`
+
+The use of this method is to leverage past outcomes and trends to identify what needs to completed to achieve future goals. Examples of *how to take action* are:
+
+-   Recommend optimal service plan
+-   Prioritizing work orders with the least operational impact
+-   Selection of products with highest revenue potential
+
+<br>
+
+## Continually Evolving
+
+`r a7`
+
+The use of this method is to identify unseen outcomes. Examples of *continually evolving* are:
+
+-   Customer chatbot
+-   Demand based pricing
+-   Future based evaluation of work schedules

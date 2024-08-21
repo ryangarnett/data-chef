@@ -1,0 +1,85 @@
+---
+title: "Understanding Artifical Intelligence"
+author: "Ryan Garnett"
+date: "2024-08-16"
+categories: [artificial intelligence, ethics, policy]
+draft: false
+---
+
+# What is Artificial Intelligence
+
+Artificial intelligence (AI) refers to the development of computer systems that can perform tasks typically requiring human intelligence. These tasks include learning from experience, recognizing patterns, making decisions, and solving problems. AI systems are designed to analyze vast amounts of data, extract meaningful insights, and apply them to various domains such as healthcare, finance, transportation, and more. They utilize algorithms and computational models to simulate cognitive functions like perception, reasoning, and decision-making. AI technology continues to evolve rapidly, driving innovation across industries and reshaping the way we interact with machines and process information.
+
+<br>
+
+# What are the Different Types of Artificial Intelligence
+
+Artificial Intelligence (AI) can be categorized into several types based on its capabilities and functions:
+
+|          **Type of AI**           | **Description**                                                                                                                                                                                                                                                                                                                                       |
+|:---------------------:|-------------------------------------------------|
+|        Narrow AI (Weak AI)        | This type of AI is designed and trained for a specific task or set of tasks. It operates within a limited context and can't perform tasks outside of its predefined scope. Examples include virtual assistants like Siri and Alexa, as well as recommendation algorithms used by streaming services.                                                  |
+|      General AI (Strong AI)       | This is a hypothetical form of AI that possesses human-like cognitive abilities, including the ability to understand, learn, and apply knowledge across different domains. General AI would be capable of performing any intellectual task that a human can do. However, true general AI has not been achieved yet and remains a goal of AI research. |
+|       Machine Learning (ML)       | ML is a subset of AI that focuses on the development of algorithms and models that allow computers to learn and improve from experience without being explicitly programmed. It includes techniques such as supervised learning, unsupervised learning, and reinforcement learning.                                                                   |
+|           Deep Learning           | Deep learning is a specialized form of ML that involves neural networks with many layers (hence the term "deep"). It has been particularly successful in tasks such as image and speech recognition, natural language processing, and playing games like Go and chess.                                                                                |
+|      Reinforcement Learning       | This type of ML involves training algorithms to make sequences of decisions. The algorithm learns to achieve a goal (maximize reward) in a complex, uncertain environment by taking actions and receiving feedback in the form of rewards or penalties.                                                                                               |
+| Natural Language Processing (NLP) | NLP focuses on enabling computers to understand, interpret, and generate human language in a way that is both meaningful and contextually appropriate. Applications include language translation, sentiment analysis, and chatbots.                                                                                                                   |
+|          Computer Vision          | This field involves enabling computers to interpret and understand the visual world through images or videos. It encompasses tasks such as object detection, image classification, facial recognition, and image generation.                                                                                                                          |
+
+These categories are not mutually exclusive, and many AI systems combine multiple approaches and techniques to achieve their goals.
+
+<br>
+
+# What is a Large Language Model and GPT
+
+Large language models like GPT (Generative Pre-trained Transformer) typically fall under the category of Machine Learning, specifically under Natural Language Processing (NLP) and Deep Learning. Here's how GPT fits into the AI landscape:
+
+|            **Type of AI**             | **Description**                                                                                                                                                                                                                                                                                                                        |
+|:---------------------:|-------------------------------------------------|
+|   Natural Language Processing (NLP)   | GPT is primarily designed for understanding and generating human language. It can perform a wide range of language-related tasks, such as text generation, language translation, text summarization, sentiment analysis, and more.                                                                                                     |
+|             Deep Learning             | GPT is based on a deep learning architecture known as the Transformer model. It consists of multiple layers of neural networks, allowing it to process and generate text with a high level of complexity and contextuality.                                                                                                            |
+|           Machine Learning            | GPT is a type of machine learning model that has been pre-trained on a large corpus of text data and fine-tuned for specific tasks. It learns patterns and structures in language data during the pre-training phase and further adapts to specific tasks during fine-tuning.                                                          |
+| Artificial General Intelligence (AGI) | While GPT is not a true AGI, it represents a step towards more generalized AI systems capable of understanding and generating human-like text across a wide range of topics and contexts. However, it's still considered a Narrow AI as it operates within the domain of language processing and lacks broader cognitive capabilities. |
+
+<br>
+
+Overall, GPT and similar large language models are powerful tools within the broader AI landscape, contributing to advancements in natural language understanding and generation. They are widely used in various applications, including virtual assistants, content generation, question answering systems, and more.
+
+<br>
+
+## How Large Language Models and GPT Work
+
+OpenAI's ChatGPT 4.o is a sophisticated language model designed to mimic human conversation. It's built on advanced technology called the Transformer architecture, which enables it to understand the context and meaning behind words in sentences. Prior to engaging in conversations, the model undergoes extensive training on a vast dataset composed of various texts, such as books and online content. Through this training process, it learns to generate coherent and contextually relevant responses. Additionally, it can be fine-tuned for specific tasks to further enhance its performance. Its capabilities extend beyond simple interactions, as it can be utilized for tasks like chatbot development and language translation.
+
+<br>
+
+### Limitations of Large Language Models and GPT
+
+While ChatGPT is an impressive tool, users should be aware of some limitations:
+
+|           **Limitation**           | **Description**                                                                                                                                                                                                                         |
+|:---------------------:|-------------------------------------------------|
+|       Lack of Understanding        | ChatGPT doesn't truly understand the context or meaning of what it's saying. It generates responses based on patterns it learned during training, which can lead to occasional inaccuracies or nonsensical outputs.                     |
+|     Bias and Offensive Content     | Like any model trained on internet data, ChatGPT may inadvertently produce biased or offensive responses. It's important for users to monitor and filter its outputs, especially in sensitive or public-facing applications.            |
+| Inability to Handle Complex Tasks  | ChatGPT may struggle with tasks that require deep understanding, reasoning, or domain-specific knowledge. It's best suited for simpler, text-based interactions and may not be suitable for tasks requiring complex decision-making.    |
+|          Privacy Concerns          | Sharing sensitive or personal information with ChatGPT could pose privacy risks, as it may retain and learn from the data provided during interactions. Users should exercise caution when discussing confidential or sensitive topics. |
+| Limited Creativity and Originality | While ChatGPT can generate diverse responses, it lacks true creativity and originality. Responses may sometimes feel repetitive or formulaic, especially when generating longer pieces of text.                                         |
+|     Reliance on Prompt Quality     | The quality of responses generated by ChatGPT heavily depends on the quality and clarity of the prompts provided by the user. Ambiguous or poorly worded prompts may result in less relevant or coherent responses.                     |
+
+<br>
+
+## Developing an Artificial Intelligence Ethics and Policy
+
+An AI policy and ethics framework is crucial for organizations to navigate the opportunities and challenges associated with AI technologies responsibly and ethically, while also maximizing the benefits for all stakeholders involved.
+
+|        **Reason**        | **Description**                                                                                                                                                                                                                                                                                                                                                       |
+|:---------------------:|-------------------------------------------------|
+|  Guidance and Standards  | AI policies provide organizations with clear guidance and standards on how AI technologies should be developed, deployed, and used within the organization. This helps ensure consistency, accountability, and compliance with legal and regulatory requirements.                                                                                                     |
+|     Risk Management      | Establishing AI ethics helps organizations identify and mitigate potential risks associated with AI technologies, such as bias, discrimination, privacy violations, and unintended consequences. By addressing these risks proactively, organizations can minimize negative impacts and protect their reputation.                                                     |
+|  Trust and Transparency  | A well-defined AI policy promotes trust and transparency among stakeholders, including customers, employees, investors, and regulators. It demonstrates the organization's commitment to responsible AI practices and ethical principles, fostering confidence in the organization's AI initiatives.                                                                  |
+|     Legal Compliance     | AI policies ensure that organizations comply with relevant laws, regulations, and industry standards related to AI technologies. This reduces the risk of legal liabilities and penalties associated with non-compliance, such as fines, lawsuits, and damage to the organization's reputation.                                                                       |
+|  Ethical Considerations  | Ethical AI policies help organizations address complex ethical considerations associated with AI technologies, such as fairness, accountability, transparency, privacy, and the impact on society. By integrating ethical principles into their AI strategies, organizations can align their actions with societal values and contribute to positive social outcomes. |
+|  Competitive Advantage   | Adopting ethical AI practices can provide organizations with a competitive advantage by differentiating them from competitors who may lack clear policies or engage in unethical AI practices. Ethical AI can enhance brand reputation, attract customers who value responsible AI, and attract top talent who want to work for socially responsible organizations.   |
+| Long-Term Sustainability | Implementing AI policies and ethics fosters long-term sustainability by promoting responsible use of AI technologies that consider the interests of all stakeholders, including present and future generations. This helps organizations build trust and goodwill over time, positioning them for continued success in an increasingly AI-driven world.               |
+
+<br>

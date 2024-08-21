@@ -1,0 +1,52 @@
+---
+title: "Macro Personas"
+author: "Ryan Garnett"
+date: "2024-08-16"
+categories: [personas]
+---
+
+```{r message = FALSE, warning = FALSE, echo = FALSE}
+library(fontawesome)
+
+data_chef_colours <- c(dark_green = "#153331",
+                       mid_green = "#1E6E6E",
+                       lite_green = "#9FC2B9",
+                       orange = "#E74F2C",
+                       red = "#A62014"
+                       )
+
+
+analyst <- fontawesome::fa(name = "user-large", data_chef_colours[[3]], width = "4em")
+application <- fontawesome::fa(name = "user-large", data_chef_colours[[4]], width = "4em")
+decision_maker <- fontawesome::fa(name = "user-large", data_chef_colours[[1]], width = "4em")
+integrator <- fontawesome::fa(name = "user-large", data_chef_colours[[2]], width = "4em")
+operator <- fontawesome::fa(name = "user-large", data_chef_colours[[5]], width = "4em")
+```
+
+Informed decisions can be made by many different people within an organization, either directly or indirectly. A decision can be made directly from a source, or through a chain of interactions and users, each having their own perspective, purpose, needs, and abilities.
+
+Leveraging philosophies from different areas within the tech sector, specifically human centric design and design thinking, can help with designing data products that meet the needs of a wide range of users. A common approach is to use persons when building products, as said by Anthony Salerno:
+
+> Personas depict the attitudes, behaviours, and motivations of customers. Unlike traditional marketing segments which focus on demographic attributes, personas focus on how customers think and why they do or think the way they do
+
+Following that idea of personas, users within most organizations can fit into the following five personas.
+
+<br>
+
+|                    | Persona        | Description                                                                                                                                                       |
+|--------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `r analyst`        | Analyst        | Performs analysis and various data related processing tasks <br> Work performed is very **technical** in nature                                                   |
+| `r application`    | Application    | Software application allowing users to perform a series of tasks <br> Work performed can be **technical** or **non-technical** in nature                          |
+| `r decision_maker` | Decision Maker | Sets directions and makes recommendations on various elements related to an organization's future direction <br> Work performed is very **communication** focused |
+| `r integrator`     | Integrator     | Enables users to access information by connecting systems together <br> Worked performed is very **technical** in nature                                          |
+| `r operator`       | Operator       | Engages with people to help provide critical information through interactions with various organizations systems <br> Work performed is very **customer** focused |
+
+<br>
+
+Knowing that users have different levels of technical understanding and ability, products should be designed to meet a range of technical ability; from low to high. Designed and developed products according to the target audience and their respected technical ability following three levels:
+
+|          |                                                                                                                                                                            |
+|:--------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   Low    | User interface: Yes with minimal inputs and interactions (i.e. Excel) <br> Code: No but comfortable using functions with spreadsheets (i.e. Excel)                         |
+| Moderate | User interface: Yes with ability to interact with data and perform analysis (i.e. Tableau) <br> Code: Yes with little emphasis on automation and optimization (i.e. Excel) |
+|   High   | User interface: No with minimal inputs and interactions (i.e. code base functions) <br> Code: Yes (i.e. R, Python, etc.)                                                   |

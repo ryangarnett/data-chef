@@ -334,5 +334,110 @@
     "title": "Data Chef",
     "section": "",
     "text": "The concept for a recipe card is that they are self contained, providing all the ingredients, preparation, and instructions required to create a meal. This approach will be used to explain how to do various data related activities within RStudio.\n\n\n\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nAbout Recipes\n\n\n\n\n\n\n\nabout\n\n\n \n\n\n\n\n2023-03-29\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nCreate a Data Frame\n\n\n\n\n\n\n\nappetizer\n\n\ncreate data frame\n\n\nnone spicy\n\n\n \n\n\n\n\n2023-03-29\n\n\nRyan Garnett\n\n\n4 min\n\n\n\n\n\n\n\n\nCreate a Numeric Variable\n\n\n\n\n\n\n\nappetizer\n\n\ncreate variable\n\n\nnone spicy\n\n\n \n\n\n\n\n2023-03-29\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nCreate Variable from an Equation\n\n\n\n\n\n\n\nappetizer\n\n\ncreate variable\n\n\nnone spicy\n\n\n \n\n\n\n\n2023-03-29\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nCreate Variable from Combining Variables\n\n\n\n\n\n\n\nappetizer\n\n\ncreate variable\n\n\nnone spicy\n\n\n \n\n\n\n\n2023-03-29\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nCreate a Character Variable\n\n\n\n\n\n\n\nappetizer\n\n\ncreate variable\n\n\nnone spicy\n\n\n \n\n\n\n\n2023-03-29\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nCreate Variable from a Function\n\n\n\n\n\n\n\nappetizer\n\n\ncreate variable\n\n\nnone spicy\n\n\n \n\n\n\n\n2023-03-29\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nCreate a Character Vector\n\n\n\n\n\n\n\nappetizer\n\n\ncreate vector\n\n\nnone spicy\n\n\n \n\n\n\n\n2023-03-29\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nCreate a Numeric Vector\n\n\n\n\n\n\n\nappetizer\n\n\ncreate vector\n\n\nnone spicy\n\n\n \n\n\n\n\n2023-03-29\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nImport CSV File Linux\n\n\n\n\n\n\n\nappetizer\n\n\nimport data\n\n\nmild spicy\n\n\n \n\n\n\n\n2023-03-31\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nImport Excel File\n\n\n\n\n\n\n\nappetizer\n\n\nimport data\n\n\nmild spicy\n\n\n \n\n\n\n\n2023-04-03\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nImport CSV File from a Repository\n\n\n\n\n\n\n\nappetizer\n\n\nimport data\n\n\nmild spicy\n\n\n \n\n\n\n\n2023-03-31\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nRead number of rows on excel import\n\n\n\n\n\n\n\nappetizer\n\n\nimport data\n\n\nmild spicy\n\n\n \n\n\n\n\n2023-04-03\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nRead Number of Rows on CSV Import\n\n\n\n\n\n\n\nappetizer\n\n\nimport data\n\n\nmild spicy\n\n\n \n\n\n\n\n2023-03-31\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nSkip Rows on Excel Import\n\n\n\n\n\n\n\nappetizer\n\n\nimport data\n\n\nmild spicy\n\n\n \n\n\n\n\n2023-04-03\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nRead Specific Sheet on Excel Import\n\n\n\n\n\n\n\nappetizer\n\n\nimport data\n\n\nmild spicy\n\n\n \n\n\n\n\n2023-04-03\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nRead range of cells on excel import\n\n\n\n\n\n\n\nappetizer\n\n\nimport data\n\n\nmild spicy\n\n\n \n\n\n\n\n2023-04-03\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nImport CSV File macOS\n\n\n\n\n\n\n\nappetizer\n\n\nimport data\n\n\nmild spicy\n\n\n \n\n\n\n\n2023-03-31\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nImport CSV File Windows\n\n\n\n\n\n\n\nappetizer\n\n\nimport data\n\n\nmild spicy\n\n\n \n\n\n\n\n2023-03-31\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nSkip Blank Rows on CSV Import\n\n\n\n\n\n\n\nappetizer\n\n\nimport data\n\n\nmild spicy\n\n\n \n\n\n\n\n2023-03-31\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nSkip Rows on CSV Import\n\n\n\n\n\n\n\nappetizer\n\n\nimport data\n\n\nmild spicy\n\n\n \n\n\n\n\n2023-03-31\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nInstall Multiple Packages\n\n\n\n\n\n\n\nappetizer\n\n\ninstalling packages\n\n\nnone spicy\n\n\n \n\n\n\n\n2023-03-29\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nInstall a Single Package\n\n\n\n\n\n\n\nappetizer\n\n\ninstalling packages\n\n\nnone spicy\n\n\n \n\n\n\n\n2023-03-29\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nLoad Multiple Packages\n\n\n\n\n\n\n\nappetizer\n\n\nloading packages\n\n\nnone spicy\n\n\n \n\n\n\n\n2023-03-29\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\n\n\nLoad Single Package\n\n\n\n\n\n\n\nappetizer\n\n\nloading packages\n\n\nnone spicy\n\n\n \n\n\n\n\n2023-03-29\n\n\nRyan Garnett\n\n\n2 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "recipes/about-ai.html",
+    "href": "recipes/about-ai.html",
+    "title": "Understanding Artifical Intelligence",
+    "section": "",
+    "text": "Artificial intelligence (AI) refers to the development of computer systems that can perform tasks typically requiring human intelligence. These tasks include learning from experience, recognizing patterns, making decisions, and solving problems. AI systems are designed to analyze vast amounts of data, extract meaningful insights, and apply them to various domains such as healthcare, finance, transportation, and more. They utilize algorithms and computational models to simulate cognitive functions like perception, reasoning, and decision-making. AI technology continues to evolve rapidly, driving innovation across industries and reshaping the way we interact with machines and process information."
+  },
+  {
+    "objectID": "recipes/about-ai.html#how-large-language-models-and-gpt-work",
+    "href": "recipes/about-ai.html#how-large-language-models-and-gpt-work",
+    "title": "Understanding Artifical Intelligence",
+    "section": "How Large Language Models and GPT Work",
+    "text": "How Large Language Models and GPT Work\nOpenAI’s ChatGPT 4.o is a sophisticated language model designed to mimic human conversation. It’s built on advanced technology called the Transformer architecture, which enables it to understand the context and meaning behind words in sentences. Prior to engaging in conversations, the model undergoes extensive training on a vast dataset composed of various texts, such as books and online content. Through this training process, it learns to generate coherent and contextually relevant responses. Additionally, it can be fine-tuned for specific tasks to further enhance its performance. Its capabilities extend beyond simple interactions, as it can be utilized for tasks like chatbot development and language translation.\n\n\nLimitations of Large Language Models and GPT\nWhile ChatGPT is an impressive tool, users should be aware of some limitations:\n\n\n\n\n\n\n\nLimitation\nDescription\n\n\n\n\nLack of Understanding\nChatGPT doesn’t truly understand the context or meaning of what it’s saying. It generates responses based on patterns it learned during training, which can lead to occasional inaccuracies or nonsensical outputs.\n\n\nBias and Offensive Content\nLike any model trained on internet data, ChatGPT may inadvertently produce biased or offensive responses. It’s important for users to monitor and filter its outputs, especially in sensitive or public-facing applications.\n\n\nInability to Handle Complex Tasks\nChatGPT may struggle with tasks that require deep understanding, reasoning, or domain-specific knowledge. It’s best suited for simpler, text-based interactions and may not be suitable for tasks requiring complex decision-making.\n\n\nPrivacy Concerns\nSharing sensitive or personal information with ChatGPT could pose privacy risks, as it may retain and learn from the data provided during interactions. Users should exercise caution when discussing confidential or sensitive topics.\n\n\nLimited Creativity and Originality\nWhile ChatGPT can generate diverse responses, it lacks true creativity and originality. Responses may sometimes feel repetitive or formulaic, especially when generating longer pieces of text.\n\n\nReliance on Prompt Quality\nThe quality of responses generated by ChatGPT heavily depends on the quality and clarity of the prompts provided by the user. Ambiguous or poorly worded prompts may result in less relevant or coherent responses."
+  },
+  {
+    "objectID": "recipes/about-ai.html#developing-an-artificial-intelligence-ethics-and-policy",
+    "href": "recipes/about-ai.html#developing-an-artificial-intelligence-ethics-and-policy",
+    "title": "Understanding Artifical Intelligence",
+    "section": "Developing an Artificial Intelligence Ethics and Policy",
+    "text": "Developing an Artificial Intelligence Ethics and Policy\nAn AI policy and ethics framework is crucial for organizations to navigate the opportunities and challenges associated with AI technologies responsibly and ethically, while also maximizing the benefits for all stakeholders involved.\n\n\n\n\n\n\n\nReason\nDescription\n\n\n\n\nGuidance and Standards\nAI policies provide organizations with clear guidance and standards on how AI technologies should be developed, deployed, and used within the organization. This helps ensure consistency, accountability, and compliance with legal and regulatory requirements.\n\n\nRisk Management\nEstablishing AI ethics helps organizations identify and mitigate potential risks associated with AI technologies, such as bias, discrimination, privacy violations, and unintended consequences. By addressing these risks proactively, organizations can minimize negative impacts and protect their reputation.\n\n\nTrust and Transparency\nA well-defined AI policy promotes trust and transparency among stakeholders, including customers, employees, investors, and regulators. It demonstrates the organization’s commitment to responsible AI practices and ethical principles, fostering confidence in the organization’s AI initiatives.\n\n\nLegal Compliance\nAI policies ensure that organizations comply with relevant laws, regulations, and industry standards related to AI technologies. This reduces the risk of legal liabilities and penalties associated with non-compliance, such as fines, lawsuits, and damage to the organization’s reputation.\n\n\nEthical Considerations\nEthical AI policies help organizations address complex ethical considerations associated with AI technologies, such as fairness, accountability, transparency, privacy, and the impact on society. By integrating ethical principles into their AI strategies, organizations can align their actions with societal values and contribute to positive social outcomes.\n\n\nCompetitive Advantage\nAdopting ethical AI practices can provide organizations with a competitive advantage by differentiating them from competitors who may lack clear policies or engage in unethical AI practices. Ethical AI can enhance brand reputation, attract customers who value responsible AI, and attract top talent who want to work for socially responsible organizations.\n\n\nLong-Term Sustainability\nImplementing AI policies and ethics fosters long-term sustainability by promoting responsible use of AI technologies that consider the interests of all stakeholders, including present and future generations. This helps organizations build trust and goodwill over time, positioning them for continued success in an increasingly AI-driven world."
+  },
+  {
+    "objectID": "data-think.html",
+    "href": "data-think.html",
+    "title": "Data Chef",
+    "section": "",
+    "text": "Understanding data and analytics concepts can be challenging, creating a significant barrier for individuals looking to leverage these technologies effectively. This complexity often hinders the ability to make data-driven decisions, limiting the potential benefits that analytics can offer to organizations and individuals alike. Communicating challenging subjects into consumable and understandable concepts is important for building a data culture with individuals who have lower technical understanding.\n\n\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nAnalytical Journey\n\n\n\n\n\n\n\nanalysis\n\n\nartificial intelligence\n\n\ndescriptive\n\n\npredictive\n\n\nprescriptive\n\n\n \n\n\n\n\n2024-08-16\n\n\nRyan Garnett\n\n\n4 min\n\n\n\n\n\n\n\n\nUnderstanding Artifical Intelligence\n\n\n\n\n\n\n\nartificial intelligence\n\n\nethics\n\n\npolicy\n\n\n \n\n\n\n\n2024-08-16\n\n\nRyan Garnett\n\n\n20 min\n\n\n\n\n\n\n\n\nAccuracy vs. Precision\n\n\n\n\n\n\n\ndata accuracy\n\n\n \n\n\n\n\n2024-08-16\n\n\nRyan Garnett\n\n\n6 min\n\n\n\n\n\n\n\n\nMacro Personas\n\n\n\n\n\n\n\npersonas\n\n\n \n\n\n\n\n2024-08-16\n\n\nRyan Garnett\n\n\n5 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "recipes/accuracy-vs-precision.html#date-data",
+    "href": "recipes/accuracy-vs-precision.html#date-data",
+    "title": "Accuracy vs. Precision",
+    "section": "Date Data",
+    "text": "Date Data\nDates and time can be expressed using a number of different elements; year, month, week, day, hours, minutes, and seconds. The example below illustrates different ways of representing dates and time, expressing now with different degrees of accuracy, moving from year, month, week, and day, to dates with hours, minutes, and seconds.\n\n\n\n\n\n\n\n\n\n\n\n\n\nVery Low\n\n\n\n\n\nVery High\n\n\n\n\n2024-01-01\n2024-08-01\n2024-08-18\n2024-08-21\n2024-08-21 10:00:00\n2024-08-21 10:28:00\n2024-08-21 10:28:30"
+  },
+  {
+    "objectID": "recipes/accuracy-vs-precision.html#number-data",
+    "href": "recipes/accuracy-vs-precision.html#number-data",
+    "title": "Accuracy vs. Precision",
+    "section": "Number Data",
+    "text": "Number Data\nThe location of the Halifax International Airport Authority can be expressed in a few different ways, but lets use latitude/longitude coordinates (map location) as an example. Coordinate locations are represented as a set of two numbers, typically including decimal values. The more decimal values provided can increase the accuracy and precision of the location. The example below illustrates different ways of representing location coordinates for the Halifax International Airport Authority, with very low to very high levels of accuracy/precision.\n\n\n\n\n\n\n\n\n\n\n\n\nVery Low\n\n\n\n\nVery High\n\n\n\n\n-64, 44\n-63.5, 44.9\n-63.51, 44.88\n-63.509, 44.881\n-63.5086, 44.8811\n-63.50861, 44.88111"
+  },
+  {
+    "objectID": "recipes/macro-personas.html",
+    "href": "recipes/macro-personas.html",
+    "title": "Macro Personas",
+    "section": "",
+    "text": "Informed decisions can be made by many different people within an organization, either directly or indirectly. A decision can be made directly from a source, or through a chain of interactions and users, each having their own perspective, purpose, needs, and abilities.\nLeveraging philosophies from different areas within the tech sector, specifically human centric design and design thinking, can help with designing data products that meet the needs of a wide range of users. A common approach is to use persons when building products, as said by Anthony Salerno:\n\nPersonas depict the attitudes, behaviours, and motivations of customers. Unlike traditional marketing segments which focus on demographic attributes, personas focus on how customers think and why they do or think the way they do\n\nFollowing that idea of personas, users within most organizations can fit into the following five personas.\n\n\n\n\n\n\n\n\n\n\nPersona\nDescription\n\n\n\n\n\nAnalyst\nPerforms analysis and various data related processing tasks  Work performed is very technical in nature\n\n\n\nApplication\nSoftware application allowing users to perform a series of tasks  Work performed can be technical or non-technical in nature\n\n\n\nDecision Maker\nSets directions and makes recommendations on various elements related to an organization’s future direction  Work performed is very communication focused\n\n\n\nIntegrator\nEnables users to access information by connecting systems together  Worked performed is very technical in nature\n\n\n\nOperator\nEngages with people to help provide critical information through interactions with various organizations systems  Work performed is very customer focused\n\n\n\n\nKnowing that users have different levels of technical understanding and ability, products should be designed to meet a range of technical ability; from low to high. Designed and developed products according to the target audience and their respected technical ability following three levels:\n\n\n\n\n\n\n\nLow\nUser interface: Yes with minimal inputs and interactions (i.e. Excel)  Code: No but comfortable using functions with spreadsheets (i.e. Excel)\n\n\nModerate\nUser interface: Yes with ability to interact with data and perform analysis (i.e. Tableau)  Code: Yes with little emphasis on automation and optimization (i.e. Excel)\n\n\nHigh\nUser interface: No with minimal inputs and interactions (i.e. code base functions)  Code: Yes (i.e. R, Python, etc.)"
+  },
+  {
+    "objectID": "recipes/analytics-evolution.html",
+    "href": "recipes/analytics-evolution.html",
+    "title": "Analytical Journey",
+    "section": "",
+    "text": "In the world of data analytics there are many different analytical methods available. Understanding what can be done with the different methods can be challenging and confusing. An analytics journey within an organization typically starts with with historical reporting, with long term aspirations of moving into machine learning and artificial intelligence.\nBetween the two endpoints, reporting and artificial intelligence, are a number of different options. Moving along the analytics journey the methods increase in complexity."
+  },
+  {
+    "objectID": "recipes/analytics-evolution.html#what-happened",
+    "href": "recipes/analytics-evolution.html#what-happened",
+    "title": "Analytical Journey",
+    "section": "What Happened",
+    "text": "What Happened\n\nThe use of this method is retrospective, providing insight on things that have happened. Examples of what happened are:\n\nHow many products were sold last month\nWhat is the average number of visitors on a Friday\nWhat is the minimum amount of time spent visiting a site"
+  },
+  {
+    "objectID": "recipes/analytics-evolution.html#is-what-happened-significant",
+    "href": "recipes/analytics-evolution.html#is-what-happened-significant",
+    "title": "Analytical Journey",
+    "section": "Is What Happened Significant",
+    "text": "Is What Happened Significant\n\nThe use of this method is to make estimates of a population, or drawing conclusion of a hypothesis. Examples of is what happened significant are:\n\nWas yesterdays usage normal\nIs the increase in energy usage an outlier\nWas the amount of precipitation last month an anomaly"
+  },
+  {
+    "objectID": "recipes/analytics-evolution.html#chances-of-something-happening",
+    "href": "recipes/analytics-evolution.html#chances-of-something-happening",
+    "title": "Analytical Journey",
+    "section": "Chances of Something Happening",
+    "text": "Chances of Something Happening\n\nThe use of this method is to estimate the likelihood of an event happening. Examples of chances of something happening are:\n\nIf a weather event will cause a travel delay\nPossibility of a customer making a return\nLikelihood of client using a new service"
+  },
+  {
+    "objectID": "recipes/analytics-evolution.html#what-is-similar",
+    "href": "recipes/analytics-evolution.html#what-is-similar",
+    "title": "Analytical Journey",
+    "section": "What is Similar",
+    "text": "What is Similar\n\nThe use of this method is to identify groups that share similar properties. Examples of what is similar are:\n\nCreate customer profile segmentation\nClassify travel delays\nIdentify hotspots where health outbreaks occurred"
+  },
+  {
+    "objectID": "recipes/analytics-evolution.html#what-could-happen",
+    "href": "recipes/analytics-evolution.html#what-could-happen",
+    "title": "Analytical Journey",
+    "section": "What Could Happen",
+    "text": "What Could Happen\n\nThe use of this method is to forecast potential future outcomes. Examples of what could happen are:\n\nEstimate wait time under different conditions\nForecast new service usage\nScenario planning"
+  },
+  {
+    "objectID": "recipes/analytics-evolution.html#how-to-take-action",
+    "href": "recipes/analytics-evolution.html#how-to-take-action",
+    "title": "Analytical Journey",
+    "section": "How to Take Action",
+    "text": "How to Take Action\n\nThe use of this method is to leverage past outcomes and trends to identify what needs to completed to achieve future goals. Examples of how to take action are:\n\nRecommend optimal service plan\nPrioritizing work orders with the least operational impact\nSelection of products with highest revenue potential"
+  },
+  {
+    "objectID": "recipes/analytics-evolution.html#continually-evolving",
+    "href": "recipes/analytics-evolution.html#continually-evolving",
+    "title": "Analytical Journey",
+    "section": "Continually Evolving",
+    "text": "Continually Evolving\n\nThe use of this method is to identify unseen outcomes. Examples of continually evolving are:\n\nCustomer chatbot\nDemand based pricing\nFuture based evaluation of work schedules"
   }
 ]

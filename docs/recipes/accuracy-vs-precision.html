@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ryan Garnett">
+<meta name="dcterms.date" content="2024-08-16">
 
-<title>Data Chef - About</title>
+<title>Data Chef - Accuracy vs.&nbsp;Precision</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +25,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -87,7 +90,7 @@ cookieconsent.run({
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 
 <div id="quarto-search-results"></div>
@@ -95,7 +98,7 @@ cookieconsent.run({
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Data Chef</span>
     </a>
   </div>
@@ -105,23 +108,23 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="../index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page">
+    <a class="nav-link" href="../about.html">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./farm-to-table.html">
+    <a class="nav-link" href="../farm-to-table.html">
  <span class="menu-text">Farm to Table</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./data-think.html">
+    <a class="nav-link" href="../data-think.html">
  <span class="menu-text">Data Think</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./data-stories.html">
+    <a class="nav-link" href="../data-stories.html">
  <span class="menu-text">Data Stories</span></a>
   </li>  
 </ul>
@@ -131,31 +134,159 @@ cookieconsent.run({
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Accuracy vs.&nbsp;Precision</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">data accuracy</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Ryan Garnett </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 16, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#difference-between-accuracy-and-precision" id="toc-difference-between-accuracy-and-precision" class="nav-link active" data-scroll-target="#difference-between-accuracy-and-precision">Difference Between Accuracy and Precision</a></li>
+  <li><a href="#data-accuracy-and-precision" id="toc-data-accuracy-and-precision" class="nav-link" data-scroll-target="#data-accuracy-and-precision">Data Accuracy and Precision</a>
+  <ul class="collapse">
+  <li><a href="#date-data" id="toc-date-data" class="nav-link" data-scroll-target="#date-data">Date Data</a></li>
+  <li><a href="#number-data" id="toc-number-data" class="nav-link" data-scroll-target="#number-data">Number Data</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="data-chef-icon-green-fill.png" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><main class="content" id="quarto-document-content">
-<p>Data and analytics are becoming important aspects in more organizations, with many making significant investments in the data domain. Utilizing data and analytics can help organizations or any size and from all industries. However, the implementation and transformation toward a <em>data driven</em> organization has tended to focus on needs of large tech-based organizations. Much of the data transformation journey has focused on highly technical areas like big data, real-time data streaming, machine learning, and artificial intelligence. While extremely important, powerful, and important, not all organizations require the bleeding edge of data analytics. This over emphasis has made it very difficult for smaller organizations, or those early in their data maturity to implement data analytics into their organizational culture.</p>
-<p><br></p>
-<p><strong>Data Chef</strong> is looking to help by demystifying the data and analytics domain through knowledge sharing with data content designed for a wide range of users, not just those with high technical abilities and understanding. A wide range of content covering data literacy, data governance, data management, and analytics, for all…not just large tech organizations.</p>
-<p><br></p>
-<p>If you have data needs <a href="mailto: ryan.garnett@data-chef.ca">reach out via email</a></p>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-</main>  
+
+
+<div class="cell">
+
 </div>
- <!-- /main -->
+<section id="difference-between-accuracy-and-precision" class="level1">
+<h1>Difference Between Accuracy and Precision</h1>
+<p>Accuracy and precision are two methods that are used to measure data. The two terms are misunderstood and commonly used incorrectly.</p>
+<p><br></p>
+<p><strong>Accuracy:</strong> how correct something is to the correct or known value. It is possible to have high accuracy and low precision</p>
+<p><strong>Precision:</strong> how close two or more elements are to each other. It is possible to have high precision and low accuracy</p>
+<p><br></p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="accuracy-vs-precision_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p><br> <br></p>
+</section>
+<section id="data-accuracy-and-precision" class="level1">
+<h1>Data Accuracy and Precision</h1>
+<p><br></p>
+<section id="date-data" class="level2">
+<h2 class="anchored" data-anchor-id="date-data">Date Data</h2>
+<p>Dates and time can be expressed using a number of different elements; year, month, week, day, hours, minutes, and seconds. The example below illustrates different ways of representing dates and time, expressing <em>now</em> with different degrees of accuracy, moving from year, month, week, and day, to dates with hours, minutes, and seconds.</p>
+<p><br></p>
+<table class="table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Very Low</th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Very High</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2024-01-01</td>
+<td style="text-align: center;">2024-08-01</td>
+<td style="text-align: center;">2024-08-18</td>
+<td style="text-align: center;">2024-08-21</td>
+<td style="text-align: center;">2024-08-21 10:00:00</td>
+<td style="text-align: center;">2024-08-21 10:28:00</td>
+<td style="text-align: center;">2024-08-21 10:28:30</td>
+</tr>
+</tbody>
+</table>
+<p><br> <br></p>
+</section>
+<section id="number-data" class="level2">
+<h2 class="anchored" data-anchor-id="number-data">Number Data</h2>
+<p>The location of the Halifax International Airport Authority can be expressed in a few different ways, but lets use latitude/longitude coordinates (map location) as an example. Coordinate locations are represented as a set of two numbers, typically including decimal values. The more decimal values provided can increase the accuracy and precision of the location. The example below illustrates different ways of representing location coordinates for the Halifax International Airport Authority, with very low to very high levels of accuracy/precision.</p>
+<p><br></p>
+<table class="table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Very Low</th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Very High</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">-64, 44</td>
+<td style="text-align: center;">-63.5, 44.9</td>
+<td style="text-align: center;">-63.51, 44.88</td>
+<td style="text-align: center;">-63.509, 44.881</td>
+<td style="text-align: center;">-63.5086, 44.8811</td>
+<td style="text-align: center;">-63.50861, 44.88111</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -176,6 +307,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const clipboard = new window.ClipboardJS('.code-copy-button', {
     target: function(trigger) {
       return trigger.previousElementSibling;

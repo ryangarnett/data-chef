@@ -1,0 +1,164 @@
+---
+title: "Accuracy vs. Precision"
+author: "Ryan Garnett"
+date: "2024-08-16"
+categories: [data accuracy]
+---
+
+```{r message = FALSE, warning = FALSE, echo = FALSE}
+# Import packages
+library(dplyr)
+library(ggplot2)
+library(showtext)
+library(lubridate)
+
+data_chef_colours <- c(dark_green = "#153331",
+                       mid_green = "#1E6E6E",
+                       lite_green = "#9FC2B9",
+                       orange = "#E74F2C",
+                       red = "#A62014"
+                       )
+
+# Create data
+df <- rbind(
+  data.frame(
+    group = c(rep("Low Accuracy Low Precision", 7)),
+    colour = c(rep("red", 7)),
+    x = c(-0.1, -0.15, -0.75, -0.7, -0.3, 0.25, 0.85),
+    y = c(0.5, -0.15, 0.05, -0.7, -0.8, 0.3, -0.4)
+    ),
+  data.frame(
+    group = c(rep("Low Accuracy High Precision", 7)),
+    colour = c(rep("orange", 7)),
+    x = c(-0.9, -0.82, -0.84, -0.91, -0.93, -0.85, -0.88),
+    y = c(0.83, 0.80, 0.86, 0.9, 0.84, 0.91, 0.81)
+    ),
+  data.frame(
+    group = c(rep("High Accuracy Low Precision", 7)),
+    colour = c(rep("mid_green", 7)),
+    x = c(-0.12, -0.09, -0.04, -0.01, 0.03, 0.07, 0.11),
+    y = c(0.13, -0.09, 0.04, 0.2, -0.06, -0.09, 0.12)
+    ),
+  data.frame(
+    group = c(rep("High Accuracy High Precision", 7)),
+    colour = c(rep("dark_green", 7)),
+    x = c(0.02, -0.02, -0.02, 0.0, 0.01, 0.03, -0.01),
+    y = c(0.01, -0.01, 0.02, 0.0, -0.01, -0.02, -0.02)
+    )
+)
+
+
+# Accuracy example with date/time
+ex_yr <- lubridate::floor_date(Sys.Date(), unit = "years")
+ex_mt <- lubridate::floor_date(Sys.Date(), unit = "months")
+ex_wk <- lubridate::floor_date(Sys.Date(), unit = "weeks")
+ex_dy <- lubridate::floor_date(Sys.Date(), unit = "days")
+ex_hr <- lubridate::floor_date(Sys.time(), unit = "hours")
+ex_mn <- lubridate::floor_date(Sys.time(), unit = "minutes")
+ex_sc <-lubridate::floor_date(Sys.time(), unit = "seconds")
+
+# Accuracy example with numbers
+lon <- -63.50861
+lat <- 44.88111
+
+coord1 <- c(floor(lon), floor(lat))
+coord2 <- c(round(lon, 1), round(lat, 1))
+coord3 <- c(round(lon, 2), round(lat, 2))
+coord4 <- c(round(lon, 3), round(lat, 3))
+coord5 <- c(round(lon, 4), round(lat, 4))
+coord6 <- c(lon, lat)
+
+
+
+datachef_ggplot_theme <- function(base_size = 11, base_line_size = base_size/22,
+                              base_rect_size = base_size/22) {
+  
+  half_line <- base_size/2
+  
+  theme(
+    # Text -- title, subtitle, labels, and caption
+    text = element_text(colour = "#404040", size = base_size, lineheight = 0.9, 
+                        hjust = 0.5, vjust = 0.5, angle = 0, margin = margin(), 
+                        debug = FALSE),
+    plot.title = element_text(size = rel(1.2), hjust = 0, 
+                              vjust = 1, margin = margin(b = half_line),
+                              face = "bold"),
+    plot.subtitle = element_text(hjust = 0, vjust = 1, margin = margin(b = half_line)), 
+    plot.caption = element_text(size = rel(0.8), hjust = 1, 
+                                vjust = 1, margin = margin(t = half_line)),
+    axis.title.x = element_text(margin = margin(t = half_line/2), vjust = 1),
+    axis.title.y = element_text(angle = 90, margin = margin(r = half_line/2), vjust = 1),
+    legend.title = element_text(hjust = 0),
+    legend.text = element_text(size = rel(0.8)),
+    axis.text.x = element_text(margin = margin(t = 0.8 * half_line/2), vjust = 1),
+    axis.text.y = element_text(margin = margin(r = 0.8 * half_line/2), hjust = 1),
+    
+    # Chart elements -- grids
+    panel.grid.major.x = ggplot2::element_blank(),
+    panel.grid.major.y = ggplot2::element_line(colour = "#BFBFBF", linetype = "dotted", linewidth = 0.3),
+    panel.grid.minor.x = ggplot2::element_blank(),
+    panel.grid.minor.y = ggplot2::element_blank(),
+    panel.background = ggplot2::element_blank()
+  )
+}
+
+```
+
+# Difference Between Accuracy and Precision
+
+Accuracy and precision are two methods that are used to measure data. The two terms are misunderstood and commonly used incorrectly.
+
+<br>
+
+**Accuracy:** how correct something is to the correct or known value. It is possible to have high accuracy and low precision
+
+**Precision:** how close two or more elements are to each other. It is possible to have high precision and low accuracy
+
+<br>
+
+```{r message = FALSE, warning = FALSE, echo = FALSE}
+df |>
+  ggplot2::ggplot() +
+    ggplot2::aes(x = x, y = y, colour = colour) +
+    ggplot2::geom_point(shape = "circle", size = 1.5) +
+    ggplot2::scale_color_manual(values = data_chef_colours) +
+    ggplot2::labs(x = "",
+                  y = "") +
+    datachef_ggplot_theme() +
+    ggplot2::facet_wrap(~group) +
+    ggplot2::geom_hline(yintercept = 0,
+                        linetype = "solid",
+                        color = "#808080") +
+    ggplot2::geom_vline(xintercept = 0,
+                        linetype = "solid",
+                        color = "#808080") +
+    ggplot2::theme(legend.position = "none")
+```
+
+<br> <br>
+
+# Data Accuracy and Precision
+
+<br>
+
+## Date Data
+
+Dates and time can be expressed using a number of different elements; year, month, week, day, hours, minutes, and seconds. The example below illustrates different ways of representing dates and time, expressing *now* with different degrees of accuracy, moving from year, month, week, and day, to dates with hours, minutes, and seconds.
+
+<br>
+
+| Very Low  |           |           |           |           |           | Very High |
+|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
+| `r ex_yr` | `r ex_mt` | `r ex_wk` | `r ex_dy` | `r ex_hr` | `r ex_mn` | `r ex_sc` |
+
+<br> <br>
+
+## Number Data
+
+The location of the Halifax International Airport Authority can be expressed in a few different ways, but lets use latitude/longitude coordinates (map location) as an example. Coordinate locations are represented as a set of two numbers, typically including decimal values. The more decimal values provided can increase the accuracy and precision of the location. The example below illustrates different ways of representing location coordinates for the Halifax International Airport Authority, with very low to very high levels of accuracy/precision.
+
+<br>
+
+|  Very Low  |            |            |            |            | Very High  |
+|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
+| `r coord1` | `r coord2` | `r coord3` | `r coord4` | `r coord5` | `r coord6` |
