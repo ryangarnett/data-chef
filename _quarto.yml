@@ -20,13 +20,6 @@ website:
   page-footer:
     center:
       - text: "&#169; Data Chef"
-  cookie-consent:
-    type: implied
-    style: simple
-    palette: dark
-  google-analytics:
-    tracking-id: "G-5QCPVB2ZGJ"
-    anonymize-ip: false
 
 format:
   html:

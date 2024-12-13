@@ -17,9 +17,15 @@ date-format: iso
 
 <br>
 
-<p>Understanding data and analytics concepts can be challenging, creating a significant barrier for individuals looking to leverage these technologies effectively. This complexity often hinders the ability to make data-driven decisions, limiting the potential benefits that analytics can offer to organizations and individuals alike. Communicating challenging subjects into consumable and understandable concepts is important for building a data culture with individuals who have lower technical understanding.</p
+<p>
+
+Understanding data and analytics concepts can be challenging, creating a significant barrier for individuals looking to leverage these technologies effectively. This complexity often hinders the ability to make data-driven decisions, limiting the potential benefits that analytics can offer to organizations and individuals alike. Communicating challenging subjects into consumable and understandable concepts is important for building a data culture with individuals who have lower technical understanding.
+
+```{=html}
+</p
 
 <br>
+```
 
 ::: {#posts}
 :::
