@@ -1,0 +1,10 @@
+---
+title: "Enterprise Data Journey"
+author: "Ryan Garnett"
+date: "2024-10-16"
+categories: [analytics, data, interview, leadership]
+---
+
+Coming out of the pandemic the Halifax International Airport Authority needed data-driven insights to navigate the recovery phase. Initially the airport struggled with unreliable dashboards from a professional service company before establishing a data analytics program. I join Rebecca Knight and Bob Laliberte, hosts of theCube, where we discuss Halifax International Airport Authorities data analytics journey, from early struggles to building a data culture that leverages predictive analytics and AI.
+
+[Watch on YouTube](https://youtu.be/9PHSldWLF2k)

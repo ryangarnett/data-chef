@@ -1,0 +1,31 @@
+---
+listing:
+  contents: talks
+  type: default
+  sort: "categories"
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [title, categories, author, date, reading-time]
+  image-align: right
+page-layout: full
+title-block-banner: true
+date-format: iso
+---
+
+<center>![](talk-banner.png)</center>
+
+<br>
+
+<p>
+
+Sharing insights on data and analytics through podcasts and interviews provides an opportunity to engage diverse audiences in meaningful conversations. These platforms allow for in-depth discussions on the challenges and opportunities in the data space, reaching both technical experts and those new to the field. The informal yet impactful nature of these conversations makes complex ideas more relatable, fostering a deeper understanding of analytics concepts across different communities.
+
+```{=html}
+</p
+
+<br>
+```
+
+::: {#posts}
+:::

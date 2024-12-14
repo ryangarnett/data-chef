@@ -1,0 +1,10 @@
+---
+title: "Building a Data Program"
+author: "Ryan Garnett"
+date: "2021-12-21"
+categories: [analytics, data, leadership, podcast]
+---
+
+Developing a data analytics program within the a legacy insurance organization has its challenges, related to culture, building trust, showing value, navigating policies, and recruiting top talent. I join Rachael Dempsey, host of the Data Science Hangout podcast, where we discuss building a data practice and data leadership within the health insurance industry.
+
+[Watch on YouTube](https://www.youtube.com/watch?v=rCrKIioEO_Q&list=PLhXOqqMYZ0yx0NTi09Ch-987wx7CtCEly)

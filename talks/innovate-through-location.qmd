@@ -1,0 +1,10 @@
+---
+title: "Innovate Through Location"
+author: "Ryan Garnett"
+date: "2024-09-30"
+categories: [data, geospatal, location, podcast]
+---
+
+Everything happens somewhere, and we make the most important decisions based on where. GIS can help reshape industries, and be inspired to apply these strategies in your own field to make better, location-driven decisions. I join Jeff Lamb, host of the Pathfinder podcast, where we discuss innovative applications of GIS in the travel and transportation industries, exploring how technology can improve operational efficiency and enhance customer experiences.
+
+[Watch on YouTube](https://www.youtube.com/watch?v=1A_dWKEuGHc)

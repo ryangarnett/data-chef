@@ -13,6 +13,8 @@ website:
         text: About
       - href: farm-to-table.qmd
         text: Farm to Table
+      - href: data-talk.qmd
+        text: Data Talk
       - href: data-think.qmd
         text: Data Think
       - href: data-stories.qmd

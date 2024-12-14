@@ -1,0 +1,14 @@
+---
+title: "Rebuild Data Systems Around Trust"
+author: "Ryan Garnett"
+date: "2024-12-04"
+categories: [ai, data, data analytics, podcast]
+---
+
+Airports are an interconnected system where one unforeseen event can tip the scale into chaos. For a smaller airport in Canada, data has grown to be its North Star in an industry full of surprises. But in order for data to bring true value to operations–and ultimately customer experience–those data insights must be grounded in trust. I join Paul Muller, host of The AI Forecast podcast, where we discuss how the Halifax International Airport Authority revamped its approach to data, creating a predictions engine that drives operational efficiency and improved customer experience.
+
+[Listen on Spotify](https://open.spotify.com/episode/3V23KE87vyJK9bZtBQjCrH)
+
+[Listen on Apple](https://podcasts.apple.com/us/podcast/the-ai-forecast-data-and-ai-in-the-cloud-era/id1779293119)
+
+[Watch on YouTube](https://www.youtube.com/watch?v=eSjtO2mpK80&list=PLe-h9HrA9qfAmGHgsmXUZgLL-T4Xjhlq8&index=2&t=6s)

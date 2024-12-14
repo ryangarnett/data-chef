@@ -1,20 +1,11 @@
 [
   {
-    "listing": "/data-stories.html",
+    "listing": "/data-talk.html",
     "items": [
-      "/stories/speed-up-analytcs.html",
-      "/stories/geospatial-distributed-processing.html",
-      "/stories/choosing-ev.html",
-      "/stories/delivering-products-faster.html"
-    ]
-  },
-  {
-    "listing": "/data-think.html",
-    "items": [
-      "/recipes/analytics-evolution.html",
-      "/recipes/about-ai.html",
-      "/recipes/accuracy-vs-precision.html",
-      "/recipes/macro-personas.html"
+      "/talks/ai-forecast-podcast.html",
+      "/talks/thecube-interview.html",
+      "/talks/data-hangouts.html",
+      "/talks/innovate-through-location.html"
     ]
   },
   {
@@ -32,6 +23,24 @@
       "/posts/plate.html",
       "/posts/deliver.html",
       "/posts/eat.html"
+    ]
+  },
+  {
+    "listing": "/data-think.html",
+    "items": [
+      "/recipes/analytics-evolution.html",
+      "/recipes/about-ai.html",
+      "/recipes/accuracy-vs-precision.html",
+      "/recipes/macro-personas.html"
+    ]
+  },
+  {
+    "listing": "/data-stories.html",
+    "items": [
+      "/stories/speed-up-analytcs.html",
+      "/stories/geospatial-distributed-processing.html",
+      "/stories/choosing-ev.html",
+      "/stories/delivering-products-faster.html"
     ]
   }
 ]
