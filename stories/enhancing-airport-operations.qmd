@@ -1,0 +1,10 @@
+---
+title: "Enhancing Airport Operations"
+author: "Ryan Garnett"
+date: "2025-01-13"
+categories: [data, data engineering, data platform, Cloudera]
+---
+
+Halifax International Airport Authority (HIAA), Nova Scotia's eighth-busiest airport in Canada by passenger traffic, handles over 3.5 million annual passengers and is a vital economic asset reinvesting profits locally. To enhance its data utilization post-pandemic and improve operational efficiency, HIAA centralized its data into a single source of truth using Cloudera on Azure. This open, cloud-first data architecture integrates real-time data from multiple sources, supported by Apache Iceberg for governance, reliability, and time-travel functionality. With Cloudera, HIAA automated 85 data pipelines, significantly reducing manual processes like flight schedule management from five days to real-time integration. The system enables predictive analytics with 94% accuracy, empowering teams across operations, security, and customer service with validated insights. HIAA’s unified data ecosystem supports better decision-making, enhances passenger experiences, and facilitates collaboration with airline carriers, all managed efficiently by a small data team delivering enterprise-level results.
+
+[Full story on Posit](https://www.cloudera.com/customers/halifax.html)

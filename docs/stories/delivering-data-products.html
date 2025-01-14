@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ryan Garnett">
+<meta name="dcterms.date" content="2024-06-14">
 
-<title>data-stories – Data Chef</title>
+<title>Delivering Data Products – Data Chef</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +25,21 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,65 +67,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-categories','listing-author','listing-date','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -136,7 +78,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Data Chef</span>
     </a>
   </div>
@@ -147,27 +89,27 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./farm-to-table.html"> 
+    <a class="nav-link" href="../farm-to-table.html"> 
 <span class="menu-text">Farm to Table</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./data-talk.html"> 
+    <a class="nav-link" href="../data-talk.html"> 
 <span class="menu-text">Data Talk</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./data-think.html"> 
+    <a class="nav-link" href="../data-think.html"> 
 <span class="menu-text">Data Think</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./data-stories.html" aria-current="page"> 
+    <a class="nav-link" href="../data-stories.html"> 
 <span class="menu-text">Data Stories</span></a>
   </li>  
 </ul>
@@ -178,273 +120,58 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Delivering Data Products</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">data</div>
+                <div class="quarto-category">data products</div>
+                <div class="quarto-category">Posit</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Ryan Garnett </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 14, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Cloudera">Cloudera <span class="quarto-category-count">(1)</span></div><div class="category" data-category="EV">EV <span class="quarto-category-count">(1)</span></div><div class="category" data-category="HIAA">HIAA <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Parquet">Parquet <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Posit">Posit <span class="quarto-category-count">(2)</span></div><div class="category" data-category="data">data <span class="quarto-category-count">(5)</span></div><div class="category" data-category="data analytics">data analytics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data engineering">data engineering <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data platform">data platform <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data products">data products <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data wrangling">data wrangling <span class="quarto-category-count">(1)</span></div><div class="category" data-category="distributed processing">distributed processing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="geospatial">geospatial <span class="quarto-category-count">(1)</span></div><div class="category" data-category="modelling">modelling <span class="quarto-category-count">(1)</span></div><div class="category" data-category="product">product <span class="quarto-category-count">(1)</span></div></div></div>
-<!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
-
-
-
-
-<center>
-<img src="stories-banner-waterpixels.jpg" class="img-fluid">
-</center>
-<p><br></p>
-<p>Communicating the findings from a data analysis is fairly standard, however explaining the full data journey to an audience is a relatively new area within the data field; enter Data Stories. The goal of a data story is to share the process, methods, analysis, and findings in a reproducible approach. Data Chef data stories are geared for a wide range of users, but lean on the more technical side, consisting of code snippets (note the code is not intended to be <em>production quality</em>, meaning considerations around optimization, testing, validation, etc. are not the main focus). The focus of these stories are to illustrate approaches for using data and analytics techniques to support informed decisions.</p>
-<p><br></p>
-<div id="posts">
-
-</div>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
     </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="data,data analytics,data wrangling,Parquet" data-listing-date-sort="1650942000000" data-listing-file-modified-sort="1715544270212" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="211">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./stories/speed-up-analytcs.html" class="no-external">Speed Up Data Analytics</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./stories/speed-up-analytcs.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('data'); return false;">
-data
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data analytics'); return false;">
-data analytics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data wrangling'); return false;">
-data wrangling
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Parquet'); return false;">
-Parquet
-</div>
-</div>
-</div>
-<div class="metadata">
-<a href="./stories/speed-up-analytcs.html" class="no-external">
-<div class="listing-date">
-2022-04-26
-</div>
-<div class="listing-author">
-Ryan Garnett, Ray Wong, Dan Reed
-</div>
-<div class="listing-reading-time">
-2 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="data,distributed processing,geospatial" data-listing-date-sort="1674446400000" data-listing-file-modified-sort="1715544311147" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="269">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./stories/geospatial-distributed-processing.html" class="no-external">Geospatial Distributed Processing</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./stories/geospatial-distributed-processing.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('data'); return false;">
-data
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('distributed processing'); return false;">
-distributed processing
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('geospatial'); return false;">
-geospatial
-</div>
-</div>
-</div>
-<div class="metadata">
-<a href="./stories/geospatial-distributed-processing.html" class="no-external">
-<div class="listing-date">
-2023-01-23
-</div>
-<div class="listing-author">
-Ryan Garnett
-</div>
-<div class="listing-reading-time">
-2 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="EV,modelling" data-listing-date-sort="1681441200000" data-listing-file-modified-sort="1681484858450" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3396">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./stories/choosing-ev.html" class="no-external">Choosing an Electric Vehicle</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./stories/choosing-ev.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('EV'); return false;">
-EV
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('modelling'); return false;">
-modelling
-</div>
-</div>
-</div>
-<div class="metadata">
-<a href="./stories/choosing-ev.html" class="no-external">
-<div class="listing-date">
-2023-04-14
-</div>
-<div class="listing-author">
-Ryan Garnett
-</div>
-<div class="listing-reading-time">
-17 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="data,HIAA,Posit,product" data-listing-date-sort="1704081600000" data-listing-file-modified-sort="1715544484782" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="170">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./stories/delivering-products-faster.html" class="no-external">Delivering Data Products Faster</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./stories/delivering-products-faster.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('data'); return false;">
-data
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('HIAA'); return false;">
-HIAA
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Posit'); return false;">
-Posit
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('product'); return false;">
-product
-</div>
-</div>
-</div>
-<div class="metadata">
-<a href="./stories/delivering-products-faster.html" class="no-external">
-<div class="listing-date">
-2024-01-01
-</div>
-<div class="listing-author">
-Ryan Garnett
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="data,data products,Posit" data-listing-date-sort="1718334000000" data-listing-file-modified-sort="1736822697898" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="141">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./stories/delivering-data-products.html" class="no-external">Delivering Data Products</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./stories/delivering-data-products.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('data'); return false;">
-data
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data products'); return false;">
-data products
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Posit'); return false;">
-Posit
-</div>
-</div>
-</div>
-<div class="metadata">
-<a href="./stories/delivering-data-products.html" class="no-external">
-<div class="listing-date">
-2024-06-14
-</div>
-<div class="listing-author">
-Ryan Garnett
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="data,data engineering,data platform,Cloudera" data-listing-date-sort="1736740800000" data-listing-file-modified-sort="1736822590798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="144">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./stories/enhancing-airport-operations.html" class="no-external">Enhancing Airport Operations</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./stories/enhancing-airport-operations.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('data'); return false;">
-data
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data engineering'); return false;">
-data engineering
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data platform'); return false;">
-data platform
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Cloudera'); return false;">
-Cloudera
-</div>
-</div>
-</div>
-<div class="metadata">
-<a href="./stories/enhancing-airport-operations.html" class="no-external">
-<div class="listing-date">
-2025-01-13
-</div>
-<div class="listing-author">
-Ryan Garnett
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>Halifax International Airport Authority (HIAA) transformed its data analytics capabilities with the implementation of Posit Connect, adopting a rapid prototyping approach to deliver user-focused products in record time. This shift enabled the development of a centralized, self-serve Data Analytics Hub, expanding content from two dashboards to interactive applications, dynamic dashboards, and a knowledge center. The platform integrates seamlessly with the existing data infrastructure and Microsoft Teams, enhancing accessibility and collaboration. Key benefits include streamlined operations, significant time savings, data-driven decision-making, and insights into ROI for programs and services. HIAA replaced disconnected, costly, and inefficient solutions with a code-first, iterative methodology powered by R’s robust libraries, allowing for visually engaging and interactive tools like Shiny apps and dashboards. The platform provides real-time data access for diverse users, from operational teams to senior executives, enabling efficient planning and recovery post-pandemic.</p>
+<p><a href="https://posit.co/about/customer-stories/halifax-airport/">Full story on Posit</a></p>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

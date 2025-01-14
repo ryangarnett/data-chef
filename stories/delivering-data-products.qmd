@@ -1,0 +1,10 @@
+---
+title: "Delivering Data Products"
+author: "Ryan Garnett"
+date: "2024-06-14"
+categories: [data, data products, Posit]
+---
+
+Halifax International Airport Authority (HIAA) transformed its data analytics capabilities with the implementation of Posit Connect, adopting a rapid prototyping approach to deliver user-focused products in record time. This shift enabled the development of a centralized, self-serve Data Analytics Hub, expanding content from two dashboards to interactive applications, dynamic dashboards, and a knowledge center. The platform integrates seamlessly with the existing data infrastructure and Microsoft Teams, enhancing accessibility and collaboration. Key benefits include streamlined operations, significant time savings, data-driven decision-making, and insights into ROI for programs and services. HIAA replaced disconnected, costly, and inefficient solutions with a code-first, iterative methodology powered by R's robust libraries, allowing for visually engaging and interactive tools like Shiny apps and dashboards. The platform provides real-time data access for diverse users, from operational teams to senior executives, enabling efficient planning and recovery post-pandemic.
+
+[Full story on Posit](https://posit.co/about/customer-stories/halifax-airport/)
